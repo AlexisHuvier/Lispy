@@ -29,6 +29,9 @@ class Env(dict):
             else:
                 print("Unknown file or module :", to_import)
 
+    def __str__(self):
+        return str({k: v if str(type(v)) != "<class 'function'>" else "function" for k, v in self.items()})
+
 
     @classmethod
     def standart(cls):

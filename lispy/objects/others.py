@@ -1,6 +1,3 @@
-from lispy.env import Env
-
-
 class Procedure:
     def __init__(self, parms, body, env):
         self.parms = parms
