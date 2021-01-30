@@ -13,6 +13,20 @@ def list_first(*args):
 def list_last(*args):
     return args[0][-1]
 
+def list_range(*args):
+    pas = 1
+    from_ = 0
+    if len(args) == 1:
+        to = args[0]
+    elif len(args) == 2:
+        to = args[1]
+        from_ = args[0]
+    elif len(args) == 3:
+        to = args[1]
+        from_ = args[0]
+        pas = args[2]
+    return list(range(from_, to, pas))
+
 def list_get(*args):
     if len(args) == 4:
         return args[0][args[1]:args[2]:args[3]]
