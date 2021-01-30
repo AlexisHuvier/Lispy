@@ -6,7 +6,7 @@ import time
 
 def to_scheme_readable(exp):
     if isinstance(exp, list):
-        return "("+" ".join(map(to_scheme_readable, exp)) + ")"
+        return "("+", ".join(map(to_scheme_readable, exp)) + ")"
     else:
         return str(exp)
 

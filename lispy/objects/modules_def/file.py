@@ -5,7 +5,7 @@ def file_read(*args):
 
 def file_readlines(*args):
     with open(args[0], "r", encoding="utf-8") as f:
-        result = f.readlines()
+        result = [i.replace("\n", "") for i in f.readlines()]
     return result
 
 def file_write(*args):
