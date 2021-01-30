@@ -15,7 +15,7 @@ class Lispy:
     @classmethod
     def lispy_eval(cls, exp, env=Env.standart()):
         if isinstance(exp, str):
-            if len(exp) and (exp[0] == '"' or exp[0] == "'"):
+            if len(exp) and exp[0] == '"':
                 return exp[1:-1]
             else:
                 try:
@@ -72,7 +72,7 @@ class Lispy:
             env[symbol] = cls.lispy_eval(exp, env)
         elif op == 'set':
             symbol, exp = args
-            env.find(symbol)[symbol] = cls.lispy_eval(exp, env)
+            env[symbol] = cls.lispy_eval(exp, env)
         elif op == 'func':
             (parms, body) = args
             return Procedure(parms, body, env)

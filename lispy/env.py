@@ -9,9 +9,6 @@ class Env(dict):
         self.update(zip(parms, args))
         if outer is not None:
             self.update(outer)
-    
-    def find(self, var):
-        return self if var in self else None
 
     def import_(self, to_import):
         from lispy.objects.modules import modules
