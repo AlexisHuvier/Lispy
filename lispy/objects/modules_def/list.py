@@ -41,6 +41,15 @@ def list_len(*args):
 def list_in(*args):
     return args[0] in args[1]
 
+def list_append(*args):
+    args[0].append(args[1])
+
+def list_remove(*args):
+    args[0].remove(args[1])
+
+def list_insert(*args):
+    args[0].insert(args[1], args[2])
+
 def list_replace(*args):
     if isinstance(args[0], str):
         return args[0].replace(args[1], args[2])
