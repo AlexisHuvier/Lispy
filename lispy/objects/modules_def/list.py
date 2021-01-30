@@ -78,3 +78,11 @@ def list_max(args):
 @lispy_function("list:count", ["list", ""])
 def list_count(args):
     return args[0].count(args[1])
+
+@lispy_function("list:map", ["", "list"])
+def list_map(args):
+    return list(map(args[0], args[1]))
+
+@lispy_function("list:filter", ["", "list"])
+def list_filter(args):
+    return list(filter(args[0], args[1]))
