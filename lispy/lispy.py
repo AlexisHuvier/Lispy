@@ -64,6 +64,8 @@ class Lispy:
         elif op == 'set':
             symbol, exp = args
             env[symbol] = cls.lispy_eval(exp, env)
+        elif op == 'del':
+            del env[args[0]]
         elif op == 'func':
             (parms, body) = args
             return Procedure(parms, body, env)
