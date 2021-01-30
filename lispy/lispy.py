@@ -13,6 +13,15 @@ class Lispy:
         return cls.lispy_eval(Parser.parse(exp), env)
 
     @classmethod
+    def get_total_env(cls, env):
+        temp = env
+        temp.update({
+            'if': "built-in function", 'while': "built-in function", 'for': "built-in function", 'def': "built-in function", 'set': "built-in function", 'del': "built-in function",
+            'import': "built-in function", 'func': "built-in function", 'ret': "built-in function"
+        })
+        return temp
+
+    @classmethod
     def lispy_eval(cls, exp, env=Env.standart()):
         if isinstance(exp, str):
             if len(exp) and exp[0] == '"':
