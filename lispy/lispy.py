@@ -54,27 +54,9 @@ class Lispy:
         elif op == "for":
             var, range_, conseq = args
             result = cls.lispy_eval(range_, env)
-            pas = 1
-            env[var] = 0
-            if isinstance(result , list):
-                if len(result) == 1 and isinstance(result[0], int):
-                    range_ = result[0]
-                elif len(result) == 2 and isinstance(result[0], int) and isinstance(result[1], int):
-                    range_ = result[1]
-                    env[var] = result[0]
-                elif len(result) == 3 and isinstance(result[0], int) and isinstance(result[1], int) and isinstance(result[2], int):
-                    range_ = result[1]
-                    env[var] = result[0]
-                    pas = result[2]
-                else:
-                    print("Unknown range, must be a list of one/two/three integers :", range_)
-                    sys.exit(0)
-            else:
-                print("Unknown range, must be a list of one/two/three integers :", range_)
-                sys.exit(0)
-            while env[var] < range_:
+            for i in result:
+                env[var] = i
                 cls.lispy_eval(conseq, env)
-                env[var] += pas
             return None
         elif op == 'def':
             symbol, exp = args
