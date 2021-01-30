@@ -1,6 +1,7 @@
 from lispy.env import Env
 from lispy.parser import Parser
 from lispy.objects import Procedure
+from lispy.error import show_error
 
 import os
 import sys
@@ -18,11 +19,9 @@ class Lispy:
                 return exp[1:-1]
             else:
                 try:
-                    return env.find(exp)[exp] 
-                except TypeError:
-                    print("Unknown exp : "+exp)
-                    print("Environnement :",env)
-                    sys.exit(0)
+                    return env[exp] 
+                except KeyError:
+                    show_error("UnknownExpression", f"Expression : {exp}\nEnvironment : {cls.get_total_env(env)}", True)
         elif isinstance(exp, (int, float)):
             return exp
         elif len(exp) == 0:
@@ -30,9 +29,8 @@ class Lispy:
         elif all(isinstance(x, list) for x in exp):
             for i in exp:
                 if isinstance(i, list) and i[0] == "ret":
-                    return Lispy.lispy_eval(i, env)
-                else:
-                    Lispy.lispy_eval(i, env)
+                    return cls.lispy_eval(i, env)
+                cls.lispy_eval(i, env)
             return None
         op, *args = exp
         if op == 'if':
@@ -88,7 +86,5 @@ class Lispy:
             try:
                 return proc(*vals)
             except Exception as e:
-                print("Error :", str(e).capitalize())
-                print("Proc :", op, "(", proc, ")", ", Values :", args, "(", vals, ")")
-                sys.exit(0)
+                show_error(e.__class__.__name__, f"Error : {str(e).capitalize()}\nProc : {op} ( {proc} )\nValues : {args} ( {vals} )", True)
                 
