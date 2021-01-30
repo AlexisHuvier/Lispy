@@ -36,6 +36,8 @@ def list_get(*args):
         return args[0][args[1]]
 
 def list_len(*args):
+def list_sub(args):
+    return args[0][args[1]:args[2]]
     return len(args[0])
 
 def list_in(*args):
