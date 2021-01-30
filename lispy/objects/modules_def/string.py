@@ -1,56 +1,77 @@
-def str_capitalize(*args):
+from lispy.error import lispy_function
+
+@lispy_function(name_lispy="str:capitalize", arguments=["str"])
+def str_capitalize(args):
     return args[0].capitalize()
 
-def str_title(*args):
+@lispy_function(name_lispy="str:title", arguments=["str"])
+def str_title(args):
     return args[0].title()
 
-def str_endswith(*args):
+@lispy_function(name_lispy="str:title", arguments=["str", "str"])
+def str_endswith(args):
     return args[0].endswith(args[1])
 
-def str_startswith(*args):
+@lispy_function(name_lispy="str:startswith", arguments=["str", "str"])
+def str_startswith(args):
     return args[0].startswith(args[1])
 
-def str_isalnum(*args):
+@lispy_function(name_lispy="str:isalnum", arguments=["str"])
+def str_isalnum(args):
     return args[0].isalnum()
 
-def str_isalpha(*args):
+@lispy_function(name_lispy="str:isalpha", arguments=["str"])
+def str_isalpha(args):
     return args[0].isalpha()
 
-def str_isascii(*args):
+@lispy_function(name_lispy="str:isascii", arguments=["str"])
+def str_isascii(args):
     return args[0].isascii()
 
-def str_isdecimal(*args):
+@lispy_function(name_lispy="str:isdecimal", arguments=["str"])
+def str_isdecimal(args):
     return args[0].isdecimal()
 
-def str_isdigit(*args):
+@lispy_function(name_lispy="str:isdigit", arguments=["str"])
+def str_isdigit(args):
     return args[0].isdigit()
 
-def str_isidentifier(*args):
+@lispy_function(name_lispy="str:isidentifier", arguments=["str"])
+def str_isidentifier(args):
     return args[0].isidentifier()
 
-def str_islower(*args):
+@lispy_function(name_lispy="str:islower", arguments=["str"])
+def str_islower(args):
     return args[0].islower()
 
-def str_isnumeric(*args):
+@lispy_function(name_lispy="str:isnumeric", arguments=["str"])
+def str_isnumeric(args):
     return args[0].isnumeric()
 
-def str_isprintable(*args):
+@lispy_function(name_lispy="str:isprintable", arguments=["str"])
+def str_isprintable(args):
     return args[0].isprintable()
 
-def str_isspace(*args):
+@lispy_function(name_lispy="str:isspace", arguments=["str"])
+def str_isspace(args):
     return args[0].isspace()
 
-def str_istitle(*args):
+@lispy_function(name_lispy="str:istitle", arguments=["str"])
+def str_istitle(args):
     return args[0].istitle()
 
-def str_isupper(*args):
+@lispy_function("str:isupper", ["str"])
+def str_isupper(args):
     return args[0].isupper()
 
-def str_lower(*args):
+@lispy_function("str:lower", ["str"])
+def str_lower(args):
     return args[0].lower()
 
-def str_upper(*args):
+@lispy_function("str:upper", ["str"])
+def str_upper(args):
     return args[0].upper()
 
-def str_split(*args):
+@lispy_function("str:split", ["str", "str"])
+def str_split(args):
     return args[0].split(args[1])

@@ -1,7 +1,6 @@
-import operator as op
 import os
-import sys
 import importlib
+from lispy.objects.modules_def.standard import *
 
 
 class Env(dict):
@@ -35,10 +34,9 @@ class Env(dict):
 
     @classmethod
     def standart(cls):
-        from lispy.objects.modules_def import input_advanced, print_advanced
         env = Env()
         env.update({
-            '+':op.add, '-':op.sub, '*':op.mul, '/':op.truediv, '//': op.floordiv, '>':op.gt, '<':op.lt, '>=':op.ge, '<=':op.le, '=':op.eq, '%': op.mod,
-            'display': print_advanced, "exit": sys.exit, 'input': input_advanced, "int": int, "float": float, "str": str, "true": True, "false": False
+            '+':add, '-':sub, '*':mul, '/':div, '//': floordiv, '>':gt, '<':lt, '>=':ge, '<=':le, '=':eq, '%': mod,
+            'display': print_advanced, "exit": exit, 'input': input_advanced, "int": int_, "float": float_, "str": str_, "list": list_, "true": True, "false": False
         })
         return env

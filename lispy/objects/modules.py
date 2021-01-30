@@ -1,25 +1,23 @@
 from lispy.objects.modules_def import *
 
-import random
 import math
-import operator as op
 import string
 
 
 modules = {
     "math": {
-        "math:pow": pow, "math:abs": abs, "math:sin": math.sin, "math:cos": math.cos, "math:tan": math.tan, "math:log": math.log, "math:log10": math.log10, "math:asin": math.asin, 
-        "math:acos": math.acos, "math:atan": math.atan, "math:atan2": math.atan2, "math:dist": math.dist, "math:sqrt": math.sqrt, "math:exp": math.exp, 
-        "math:degrees": math.degrees, "math:radiants": math.radians, "math:floor": math.floor, "math:ceil": math.ceil, 'math:pi': math.pi, 'math:e': math.e, 
-        'math:tau': math.tau, 'math:inf': math.inf, 'math:nan': math.nan, "math:!": math.factorial, "math:fib": fib
+        'math:pi': math.pi, 'math:e': math.e, 'math:tau': math.tau, 'math:inf': math.inf, 'math:nan': math.nan, "math:!": math_fact, "math:fib": math_fib, "math:ceil": math_ceil,
+        "math:comb": math_comb, "math:abs": math_abs, "math:isfinite": math_isfinite, "math:isinf": math_isinf, "math:isnan": math_isnan, "math:perm": math_perm, "math:trunc": math_trunc,
+        "math:exp": math_exp, "math:log": math_log, "math:log10": math_log10, "math:pow": math_pow, "math:sqrt": math_sqrt, "math:acos": math_acos, "math:asin": math_asin, 
+        "math:atan": math_atan, "math:atan2": math_atan2, "math:cos": math_cos, "math:sin": math_sin, "math:tan": math_tan, "math:degrees": math_degrees, "math:radians": math_radians
     },
     "rand": {
-        "rand:randint": random.randint, "rand:randrange": random.randrange, "rand:choice": choice_advanced, "rand:random": random.random, "rand:uniform": random.uniform
+        "rand:randint": random_randint, "rand:randrange": random_randrange, "rand:choice": random_choice, "rand:random": random_random, "rand:uniform": random_uniform
     },
     "list": {
         "list:create": list_create, "list:join": list_join, "list:first": list_first, "list:last": list_last, "list:get": list_get, "list:len": list_len, "list:reverse": list_reverse,
         "list:in": list_in, "list:replace": list_replace, "list:sort": list_sort, "list:min": list_min, "list:max": list_max, "list:count": list_count, "list:clear": list_clear,
-        "list:range": list_range, "list:append": list_append, "list:remove": list_remove, "list:insert": list_insert
+        "list:range": list_range, "list:append": list_append, "list:remove": list_remove, "list:insert": list_insert, "list:sub": list_sub
     },
     "stats": {
         "stats:mean": statistics_mean, "stats:median": statistics_median, "stats:mode": statistics_mode, "stats:variance": statistics_variance
