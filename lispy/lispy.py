@@ -1,0 +1,94 @@
+from lispy.env import Env
+from lispy.parser import Parser
+from lispy.objects import Procedure
+
+import os
+import sys
+
+
+class Lispy:
+    @classmethod
+    def lispy_eval_with_parsing(cls, exp, env=Env.standart()):
+        return cls.lispy_eval(Parser.parse(exp), env)
+
+    @classmethod
+    def lispy_eval(cls, exp, env=Env.standart()):
+        if isinstance(exp, str):
+            if len(exp) and (exp[0] == '"' or exp[0] == "'"):
+                return exp[1:-1]
+            else:
+                try:
+                    return env.find(exp)[exp] 
+                except TypeError:
+                    print("Unknown exp : "+exp)
+                    print("Environnement :",env)
+                    sys.exit(0)
+        elif isinstance(exp, (int, float)):
+            return exp
+        elif len(exp) == 0:
+            return None
+        elif all(isinstance(x, list) for x in exp):
+            for i in exp:
+                if isinstance(i, list) and i[0] == "ret":
+                    return Lispy.lispy_eval(i, env)
+                else:
+                    Lispy.lispy_eval(i, env)
+            return None
+        op, *args = exp
+        if op == 'if':
+            test, conseq, alt = args
+            exp = (conseq if cls.lispy_eval(test, env) else alt)
+            return cls.lispy_eval(exp, env)
+        elif op == 'while':
+            test, conseq = args
+            while cls.lispy_eval(test, env):
+                cls.lispy_eval(conseq, env)
+            return None
+        elif op == "for":
+            var, range_, conseq = args
+            result = cls.lispy_eval(range_, env)
+            pas = 1
+            env[var] = 0
+            if isinstance(result , list):
+                if len(result) == 1 and isinstance(result[0], int):
+                    range_ = result[0]
+                elif len(result) == 2 and isinstance(result[0], int) and isinstance(result[1], int):
+                    range_ = result[1]
+                    env[var] = result[0]
+                elif len(result) == 3 and isinstance(result[0], int) and isinstance(result[1], int) and isinstance(result[2], int):
+                    range_ = result[1]
+                    env[var] = result[0]
+                    pas = result[2]
+                else:
+                    print("Unknown range, must be a list of one/two/three integers :", range_)
+                    sys.exit(0)
+            else:
+                print("Unknown range, must be a list of one/two/three integers :", range_)
+                sys.exit(0)
+            while env[var] < range_:
+                cls.lispy_eval(conseq, env)
+                env[var] += pas
+            return None
+        elif op == 'def':
+            symbol, exp = args
+            env[symbol] = cls.lispy_eval(exp, env)
+        elif op == 'set':
+            symbol, exp = args
+            env.find(symbol)[symbol] = cls.lispy_eval(exp, env)
+        elif op == 'func':
+            (parms, body) = args
+            return Procedure(parms, body, env)
+        elif op == "import":
+            env.import_(args[0])
+        elif op == "ret":
+            return cls.lispy_eval(args[0], env)
+        else:
+            proc = cls.lispy_eval(op, env)
+            vals = [cls.lispy_eval(arg, env) for arg in args]
+            try:
+                return proc(*vals)
+            except Exception as e:
+                print("Error :", str(e).capitalize())
+                print("Proc :", op, "(", proc, ")", ", Values :", args, "(", vals, ")")
+                sys.exit(0)
+                

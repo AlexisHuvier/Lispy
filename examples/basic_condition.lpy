@@ -1,0 +1,8 @@
+(
+    (def age (input "Quel est votre age :\n"))
+    (set age (int age))
+    ( if (<= age 17)
+        (display "Vous êtes mineur.")
+        (display "Vous êtes majeur.")
+    )
+)

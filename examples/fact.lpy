@@ -1,0 +1,9 @@
+(
+    (def ! (
+        func (nb) (
+            (def result 1)
+            (for test (list:create 1 (+ nb 1)) (set result (* result test)))
+            (ret result)
+        )
+    ))
+)

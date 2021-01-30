@@ -1,0 +1,5 @@
+(
+    (def nb 10)
+    (while (< nb 20) (def nb (+ nb 1)))
+    (display nb)
+)

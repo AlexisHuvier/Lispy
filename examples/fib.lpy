@@ -1,0 +1,21 @@
+(
+    (def fib (
+        func (nb) (
+            if (= nb 0) (ret 0) (
+                if (= nb 1) (ret 1) (
+                    if (= nb 2) (ret 1) (
+                        (def nb1 1)
+                        (def nb2 1)
+                        (def suivant 0)
+                        (for test (list 2 nb) (
+                            (set suivant (+ nb1 nb2))
+                            (set nb1 nb2)
+                            (set nb2 suivant)
+                        ))
+                        (ret suivant)
+                    )
+                )
+            )
+        )
+    ))
+)
