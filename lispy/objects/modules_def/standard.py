@@ -71,3 +71,7 @@ def str_(args):
 
 def list_(*args):
     return list(args)
+
+@lispy_function("not", [""])
+def not_(args):
+    return not args[0]

@@ -17,7 +17,7 @@ A lisp-like language made with Python
 ## Features
 
 - Basic mathematic operators : +, -, *, /, //, %
-- Basic logic operators : =, !=, <=, >=, <, >
+- Basic logic operators : =, !=, <=, >=, <, >, !
 - Basic functions :
 
   - Variables management with def, set, del
