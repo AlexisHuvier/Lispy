@@ -42,32 +42,44 @@ class Parser:
         chars = chars.replace("(", " ( ").replace(")", " ) ").replace("\n", "")
         regex = re.compile(r"(\")((?:[^\\\"]|\\.)*)(\")")
         chars = regex.sub(" \\1 \\2 \\3 ", chars)
-        tokens = chars.split()
         escaped = {
             "\\r": "\r", "\\n": "\n", "\\t": "\t", "\\b": "\b", '\\"': "\"", "\\\\": "\\"
         }
+        for i in escaped.keys():
+            chars = chars.replace(i, escaped[i])
         tlist = []
-        while len(tokens):
-            token = tokens.pop(0)
-            if token == '"':
-                text = '"'
-                try:
-                    while tokens[0] != '"':
-                        if text == '"':
-                            temp = tokens[0]
-                        else:
-                            temp = " " + tokens[0]
-                        for i in escaped.keys():
-                            temp = temp.replace(i, escaped[i])
-                        text += temp
-                        tokens.pop(0)
-                    text += '"'
-                    tokens.pop(0)
-                except IndexError:
-                    print("Expected \"")
-                    sys.exit(0)
-                tlist.append(text)
-            elif tokens != "":
-                tlist.append(token)
+        current = 0
+        state = 0
+        text = ""
+        while(current != len(chars)):
+            if state == 1 and (chars[current] != '"' or chars[current-1] == "\\") :
+                text += chars[current]
+            elif state == 1:
+                tlist.append('"'+text[1:-1]+'"')
+                text = ""
+                state = 0
+            elif chars[current] == "(":
+                if text != "":
+                    tlist.append(text)
+                text = ""
+                tlist.append("(")
+            elif chars[current] == ")":
+                if text != "":
+                    tlist.append(text)
+                text = ""
+                tlist.append(")")
+            elif chars[current] == '"':
+                text = ""
+                state = 1
+            elif chars[current] == " ":
+                if text != "":
+                    tlist.append(text)
+                text = ""
+            else:
+                text += chars[current]
+            current += 1
+        if text != "":
+            tlist.append(text)
         return tlist
+
 
