@@ -40,7 +40,7 @@ A lisp-like language made with Python
 
 - Additive modules (import \<python:name>):
 
-  - Coming Soon
+  - lpygame : Based on python's pygame (27 functions) (must install pygame)
 
 ## Changelog
 
