@@ -14,7 +14,7 @@ class Env(dict):
         if to_import.split(":")[0] == "python":
             to_import = to_import.split(":")[1]
             try:
-                self.update(importlib.import_module(to_import).module)
+                self.update(importlib.import_module("libraries."+to_import).module)
             except ModuleNotFoundError:
                 print("Unkown python file :", to_import)
         elif to_import in modules.keys():

@@ -35,6 +35,9 @@ A lisp-like language made with Python
   - stats to get mean, median, mode and variance (4 functions)
   - rand to get random numbers or choice in list (5 functions)
   - file to read or write on files (4 functions)
+- Additive modules (import \<python:name>):
+
+  - Coming Soon
 
 ## Changelog
 
