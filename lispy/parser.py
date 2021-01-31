@@ -39,9 +39,7 @@ class Parser:
     
     @classmethod
     def tokenize(cls, chars):
-        chars = chars.replace("(", " ( ").replace(")", " ) ").replace("\n", "")
-        regex = re.compile(r"(\")((?:[^\\\"]|\\.)*)(\")")
-        chars = regex.sub(" \\1 \\2 \\3 ", chars)
+        chars = chars.replace("\n", "")
         escaped = {
             "\\r": "\r", "\\n": "\n", "\\t": "\t", "\\b": "\b", '\\"': "\"", "\\\\": "\\"
         }
@@ -55,7 +53,7 @@ class Parser:
             if state == 1 and (chars[current] != '"' or chars[current-1] == "\\") :
                 text += chars[current]
             elif state == 1:
-                tlist.append('"'+text[1:-1]+'"')
+                tlist.append('"'+text+'"')
                 text = ""
                 state = 0
             elif chars[current] == "(":
