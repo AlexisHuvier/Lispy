@@ -19,6 +19,14 @@ def math_fib(args):
         nb2 = suivant
     return suivant
 
+@lispy_function("math:clamp", ["int|float", "int|float", "int|float"])
+def math_clamp(args):
+    if args[0] < args[1]:
+        return args[1]
+    elif args[0] > args[2]:
+        return args[2]
+    return args[0]
+
 @lispy_function("math:ceil", ["float|int"])
 def math_ceil(args):
     return math.ceil(args[0])

@@ -2,6 +2,7 @@ import pygame
 import pygame.locals as pgconst
 import os
 from libraries.lpygame_src.utils import Font, Color
+from libraries.lpygame_src.world import World
 
 pygame.init()
 
@@ -22,25 +23,25 @@ class Window:
         self.clock = pygame.time.Clock()
         self.is_running = False
         self.debug_font = Font("arial", 15, True, False, False, Color.from_name("ORANGE"), None, False)
+        self.world = World(self)
     
     def stop(self):
-        """
-            Stop Window
-        """
         self.is_running = False
     
     def run(self):
-        """
-            Launch Window
-        """
         self.is_running = True
         while self.is_running:
             for event in pygame.event.get():
                 self.process_event(event)
+
+            self.world.update()
             
             self.screen.fill(self.color.get_rgba())
 
+            self.world.show()
+
             if self.debug:
+                self.world.show_debug()
                 try:
                     fps_label = self.debug_font.render("FPS : " + str(round(self.clock.get_fps())))
                 except OverflowError:
@@ -54,3 +55,13 @@ class Window:
     def process_event(self, evt):
         if evt.type == pgconst.QUIT:
             self.stop()
+        elif evt.type == pgconst.KEYDOWN:
+            self.world.keypress(evt)
+        elif evt.type == pgconst.MOUSEBUTTONDOWN:
+            self.world.mousepress(evt)
+        elif evt.type == pgconst.KEYUP:
+            self.world.keyup(evt)
+        elif evt.type == pgconst.MOUSEMOTION:
+            self.world.mousemotion(evt)
+        else:
+            self.world.event(evt)

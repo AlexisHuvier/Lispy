@@ -1,7 +1,15 @@
 from libraries.lpygame_src.lispy_functions import *
 
 module = {
-    "lpygame:win": lpygame_win, "lpygame:win:run": lpygame_win_run, "lpygame:win:setdebug": lpygame_win_setdebug, "lpygame:win:debug": lpygame_win_debug,
+    "lpygame:win": lpygame_win, "lpygame:win:run": lpygame_win_run, "lpygame:win:setdebug": lpygame_win_setdebug, "lpygame:win:debug": lpygame_win_debug, "lpygame:win:fps": lpygame_win_fps, 
+    "lpygame:win:setfps": lpygame_win_setfps, "lpygame:win:world": lpygame_win_world, "lpygame:win:setworld": lpygame_win_setworld,
+
+    "lpygame:world": lpygame_world, "lpygame:world:getsystem": lpygame_world_getsystem,
+
+    "lpygame:entitysystem:addentity": lpygame_entitysystem_addentity, "lpygame:entitysystem:removeentity": lpygame_entitysystem_removeentity, 
+    "lpygame:entitysystem:getentity": lpygame_entitysystem_getentity, "lpygame:entitysystem:hasentity": lpygame_entitysystem_hasentity,
+
+    "lpygame:entity": lpygame_entity,
 
     "lpygame:font": lpygame_font, "lpygame:font:rendersize": lpygame_font_rendersize,
 

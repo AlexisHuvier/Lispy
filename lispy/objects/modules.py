@@ -9,7 +9,8 @@ modules = {
         'math:pi': math.pi, 'math:e': math.e, 'math:tau': math.tau, 'math:inf': math.inf, 'math:nan': math.nan, "math:!": math_fact, "math:fib": math_fib, "math:ceil": math_ceil,
         "math:comb": math_comb, "math:abs": math_abs, "math:isfinite": math_isfinite, "math:isinf": math_isinf, "math:isnan": math_isnan, "math:perm": math_perm, "math:trunc": math_trunc,
         "math:exp": math_exp, "math:log": math_log, "math:log10": math_log10, "math:pow": math_pow, "math:sqrt": math_sqrt, "math:acos": math_acos, "math:asin": math_asin, 
-        "math:atan": math_atan, "math:atan2": math_atan2, "math:cos": math_cos, "math:sin": math_sin, "math:tan": math_tan, "math:degrees": math_degrees, "math:radians": math_radians
+        "math:atan": math_atan, "math:atan2": math_atan2, "math:cos": math_cos, "math:sin": math_sin, "math:tan": math_tan, "math:degrees": math_degrees, "math:radians": math_radians,
+        "math:clamp": math_clamp
     },
     "rand": {
         "rand:randint": random_randint, "rand:randrange": random_randrange, "rand:choice": random_choice, "rand:random": random_random, "rand:uniform": random_uniform

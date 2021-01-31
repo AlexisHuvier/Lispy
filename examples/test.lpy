@@ -3,5 +3,6 @@
     (def win (lpygame:win "Test" (lpygame:vec2 500 300) (lpygame:color:fromname "BLACK")))
     (display (lpygame:win:debug win))
     (lpygame:win:setdebug win true)
+    (lpygame:entitysystem:addentity (lpygame:world:getsystem (lpygame:win:world win) "entity") (lpygame:entity))
     (lpygame:win:run win)
 )
