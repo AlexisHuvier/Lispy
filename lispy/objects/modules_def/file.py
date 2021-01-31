@@ -1,3 +1,5 @@
+import os
+import shutil
 from lispy.error import lispy_function
 
 @lispy_function("file:read", ["str"])
@@ -21,3 +23,31 @@ def file_write(args):
 def file_append(args):
     with open(args[0], "a", encoding="utf-8") as f:
         f.write(args[1])
+
+@lispy_function("file:exists", ["str"])
+def file_exists(args):
+    return os.path.exists(args[0])
+
+@lispy_function("file:isdir", ["str"])
+def file_isdir(args):
+    return os.path.isdir(args[0])
+
+@lispy_function("file:isfile", ["str"])
+def file_isfile(args):
+    return os.path.isfile(args[0])
+
+@lispy_function("file:remove", ["str"])
+def file_remove(args):
+    if os.path.isdir(args):
+        shutil.rmtree(args[0])
+    else:
+        os.remove(ags[0])
+
+@lispy_function("file:touch", ["str"])
+def file_touch(args):
+    with open(args[0], "w") as f:
+        f.write("")
+
+@lispy_function("file:rename", ["str", "str"])
+def file_rename(args):
+    os.rename(args[0], args[1])

@@ -34,7 +34,7 @@ A lisp-like language made with Python
   - math : Many functions and constants for mathematics (5 constants, 23 functions)
   - stats : Get mean, median, mode and variance (4 functions)
   - rand : Get random numbers or choice in list (5 functions)
-  - file : Read or write file (4 functions)
+  - file : Read or write file (10 functions)
   - turtle : Based on python's turtle (36 functions)
 
 - Additive modules (import \<python:name>):
