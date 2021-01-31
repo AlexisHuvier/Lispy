@@ -27,14 +27,16 @@ A lisp-like language made with Python
   - Loop with for and while
   - Import to import other lispy file or native module or python module
 
-- Native modules :
+- Native modules (import \<name>):
 
-  - str to manage string (9 constants, 19 functions)
-  - list to manage list (20 functions)
-  - math with many functions and constants (5 constants, 23 functions)
-  - stats to get mean, median, mode and variance (4 functions)
-  - rand to get random numbers or choice in list (5 functions)
-  - file to read or write on files (4 functions)
+  - str : Manage string (9 constants, 19 functions)
+  - list : Manage list (20 functions)
+  - math : Many functions and constants for mathematics (5 constants, 23 functions)
+  - stats : Get mean, median, mode and variance (4 functions)
+  - rand : Get random numbers or choice in list (5 functions)
+  - file : Read or write file (4 functions)
+  - turtle : Based on python's turtle (36 functions)
+
 - Additive modules (import \<python:name>):
 
   - Coming Soon

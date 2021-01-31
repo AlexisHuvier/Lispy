@@ -32,5 +32,15 @@ modules = {
     },
     "file": {
         "file:read": file_read, "file:readlines": file_readlines, "file:write": file_write, "file:append": file_append
+    },
+    "turtle": {
+        "turtle:forward": turtle_forward, "turtle:back": turtle_back, "turtle:right": turtle_right, "turtle:left": turtle_left, "turtle:setpos": turtle_setpos, 
+        "turtle:setx": turtle_setx, "turtle:sety": turtle_sety, "turtle:setangle": turtle_setangle, "turtle:home": turtle_home, "turtle:circle": turtle_circle, 
+        "turtle:dot": turtle_dot, "turtle:undo": turtle_undo, "turtle:setspeed": turtle_setspeed, "turtle:speed": turtle_speed, "turtle:pos": turtle_pos, 
+        "turtle:towards": turtle_towards, "turtle:x": turtle_x, "turtle:y": turtle_y, "turtle:angle": turtle_angle, "turtle:down": turtle_down, "turtle:up": turtle_up, 
+        "turtle:setwidth": turtle_setwidth, "turtle:width": turtle_width, "turtle:isdown": turtle_isdown, "turtle:setpencolor": turtle_setpencolor, "turtle:pencolor": turtle_pencolor, 
+        "turtle:setfillcolor": turtle_setfillcolor, "turtle:fillcolor": turtle_fillcolor, "turtle:isfilling": turtle_isfilling, "turtle:beginfill": turtle_beginfill, 
+        "turtle:endfill": turtle_endfill, "turtle:reset": turtle_reset, "turtle:clear": turtle_clear, "turtle:hide": turtle_hide, "turtle:show": turtle_show, 
+        "turtle:isshowed": turtle_isshowed, "turtle:end": turtle_end
     }
 }
