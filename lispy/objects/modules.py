@@ -43,5 +43,9 @@ modules = {
         "turtle:setfillcolor": turtle_setfillcolor, "turtle:fillcolor": turtle_fillcolor, "turtle:isfilling": turtle_isfilling, "turtle:beginfill": turtle_beginfill, 
         "turtle:endfill": turtle_endfill, "turtle:reset": turtle_reset, "turtle:clear": turtle_clear, "turtle:hide": turtle_hide, "turtle:show": turtle_show, 
         "turtle:isshowed": turtle_isshowed, "turtle:end": turtle_end
+    },
+    "sqlite": {
+        "sqlite:connect": sqlite_connect, "sqlite:executewithreturn": sqlite_executewithreturn, "sqlite:executewithoutreturn": sqlite_executewithoutreturn, "sqlite:reconnect": sqlite_reconnect, 
+        "sqlite:disconnect": sqlite_disconnect
     }
 }
