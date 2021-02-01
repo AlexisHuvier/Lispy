@@ -41,6 +41,7 @@ A lisp-like language made with Python
 - Additive modules (import \<python:name>):
 
   - lpygame : Based on python's pygame (WIP) (77 functions) (must install pygame)
+  - lrequests : Based on python's requests (WIP) (8 functions) (must install requests)
 
 ## Changelog
 
