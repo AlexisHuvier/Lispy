@@ -5,7 +5,7 @@ from libraries.lpygame_src.utils import Font, Color
 class EntitySystem:
     def __init__(self, world):
         self.world = world
-        self.entities = pygame.sprite.Group()
+        self.entities = []
         self.debugfont = Font("arial", 15, False, False, False, Color.from_name("RED"), None, False)
 
     def get_entity(self, identity):
@@ -18,7 +18,7 @@ class EntitySystem:
             entity.identity = self.entities.sprites()[-1].identity + 1
         else:
             entity.identity = 0
-        self.entities.add(entity)
+        self.entities.append(entity)
         entity.system = self
         return entity
 
@@ -48,9 +48,15 @@ class EntitySystem:
         pass
 
     def show(self):
-        self.entities.draw(self.world.window.screen)
+        for i in self.entities:
+            if i.has_component("ShowComponent"):
+                i.get_component("ShowComponent").show(self.world.window.screen)
 
     def show_debug(self):
-        for i in self.entities.sprites():
-            render = self.debugfont.render("ID : "+str(i.identity))
-            self.world.window.blit(render, (i.rect.x + i.rect.width / 2 - render.get_width()/2, i.rect.y - 20))
+        for i in self.entities:
+            if i.has_component("PositionComponent"):
+                pos = i.get_component("PositionComponent").pos()
+                render = self.debugfont.render("ID : "+str(i.identity))
+                self.world.window.screen.blit(render, (pos.x, pos.y - 10))
+            if i.has_component("ShowComponent"):
+                i.get_component("ShowComponent").show(self.world.window.screen)

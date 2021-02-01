@@ -8,7 +8,7 @@ pygame.init()
 
 
 class Window:
-    def __init__(self, title, size, color):
+    def __init__(self, title, size, color=Color.from_name("BLACK")):
 
         self.fps = 60
         self.debug = False
@@ -35,7 +35,6 @@ class Window:
                 self.process_event(event)
 
             self.world.update()
-            
             self.screen.fill(self.color.get_rgba())
 
             self.world.show()

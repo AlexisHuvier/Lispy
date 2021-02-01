@@ -12,10 +12,10 @@ class World:
         pass
 
     def show(self):
-        pass
+        self.systems["entity"].show()
 
     def show_debug(self):
-        pass
+        self.systems["entity"].show_debug()
 
     def keypress(self, evt):
         pass

@@ -4,9 +4,9 @@ from lispy.error import lispy_function
 import math
 
 
-@lispy_function("lpygame:win", ["str", "Vec2", "Color"])
+@lispy_function("lpygame:win", ["str", "Vec2"])
 def lpygame_win(args):
-    return Window(args[0], args[1], args[2])
+    return Window(args[0], args[1])
 
 @lispy_function("lpygame:win:run", ["Window"])
 def lpygame_win_run(args):
@@ -19,6 +19,14 @@ def lpygame_win_setdebug(args):
 @lispy_function("lpygame:win:debug", ["Window"])
 def lpygame_win_debug(args):
     return args[0].debug
+
+@lispy_function("lpygame:win:setcolor", ["Window", "Color"])
+def lpygame_win_setcolor(args):
+    args[0].color = args[1]
+
+@lispy_function("lpygame:win:color", ["Window"])
+def lpygame_win_color(args):
+    return args[0].color
 
 @lispy_function("lpygame:win:fps", ["Window"])
 def lpygame_win_fps(args):

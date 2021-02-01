@@ -1,0 +1,3 @@
+from libraries.lpygame_src.components.position_component import PositionComponent
+from libraries.lpygame_src.components.show_component import ShowComponent
+from libraries.lpygame_src.components.text_component import TextComponent
