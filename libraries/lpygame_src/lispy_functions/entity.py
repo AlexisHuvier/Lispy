@@ -6,7 +6,7 @@ from lispy.error import lispy_function
 def lpygame_entity(args):
     return Entity()
 
-@lispy_function("lpygame:entity:addcomponent", ["Entity", "PositionComponent|ShowComponent|TextComponent"])
+@lispy_function("lpygame:entity:addcomponent", ["Entity", "PositionComponent|ShowComponent|TextComponent|SpriteComponent"])
 def lpygame_entity_addcomponent(args):
     return args[0].add_component(args[1])
 

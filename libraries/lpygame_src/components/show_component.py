@@ -2,14 +2,21 @@ from libraries.lpygame_src.components.component import Component
 
 
 class ShowComponent(Component):
-    def __init__(self):
+    def __init__(self, sprite):
         super().__init__()
         self.required_components.add("PositionComponent")
-        self.required_components.add("TextComponent")
+        if sprite:
+            self.required_components.add("SpriteComponent")
+        else:
+            self.required_components.add("TextComponent")
+        self.sprite = sprite
     
     def show(self, screen):
         pos = self.entity.get_component("PositionComponent").pos()
-        image = self.entity.get_component("TextComponent").render
+        if self.sprite:
+            image = self.entity.get_component("SpriteComponent").transformed_image
+        else:
+            image = self.entity.get_component("TextComponent").render
         screen.blit(image, pos.coords())
     
     def show_debug(self, screen):

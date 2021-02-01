@@ -15,7 +15,7 @@ class EntitySystem:
 
     def add_entity(self, entity):
         if len(self.entities):
-            entity.identity = self.entities.sprites()[-1].identity + 1
+            entity.identity = self.entities[-1].identity + 1
         else:
             entity.identity = 0
         self.entities.append(entity)
@@ -57,6 +57,6 @@ class EntitySystem:
             if i.has_component("PositionComponent"):
                 pos = i.get_component("PositionComponent").pos()
                 render = self.debugfont.render("ID : "+str(i.identity))
-                self.world.window.screen.blit(render, (pos.x, pos.y - 10))
+                self.world.window.screen.blit(render, (pos.x, pos.y - 20))
             if i.has_component("ShowComponent"):
                 i.get_component("ShowComponent").show(self.world.window.screen)
