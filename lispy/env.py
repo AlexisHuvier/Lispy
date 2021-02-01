@@ -1,6 +1,7 @@
 import os
 import importlib
 from lispy.objects.modules_def.standard import *
+from lispy.error import show_error
 
 
 class Env(dict):
@@ -15,8 +16,8 @@ class Env(dict):
             to_import = to_import.split(":")[1]
             try:
                 self.update(importlib.import_module("libraries."+to_import).module)
-            except ModuleNotFoundError:
-                print("Unkown python file :", to_import)
+            except ModuleNotFoundError as e:
+                show_error("ModuleError", str(e), True)
         elif to_import in modules.keys():
             self.update(modules[to_import])
         else:
