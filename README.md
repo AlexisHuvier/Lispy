@@ -30,7 +30,7 @@ A lisp-like language made with Python
 - Native modules (import \<name>):
 
   - str : Manage string (9 constants, 19 functions)
-  - list : Manage list (20 functions)
+  - list : Manage list (21 functions)
   - math : Many functions and constants for mathematics (5 constants, 24 functions)
   - stats : Get mean, median, mode and variance (4 functions)
   - rand : Get random numbers or choice in list (5 functions)

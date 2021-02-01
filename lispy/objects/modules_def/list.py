@@ -86,3 +86,7 @@ def list_map(args):
 @lispy_function("list:filter", ["", "list"])
 def list_filter(args):
     return list(filter(args[0], args[1]))
+
+@lispy_function("list:zip", ["list", "list"])
+def list_zip(args):
+    return list(zip(args[0], args[1]))
