@@ -1,4 +1,4 @@
-from libraries.lpygame_src.components.component import Component
+from libraries_src.lpygame_src.components.component import Component
 
 
 class ShowComponent(Component):

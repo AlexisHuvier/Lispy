@@ -1,5 +1,5 @@
-from libraries.lpygame_src.lispy_functions import *
-from libraries.lpygame_src.lispy_functions.components import *
+from libraries_src.lpygame_src.lispy_functions import *
+from libraries_src.lpygame_src.lispy_functions.components import *
 
 module = {
     "lpygame:win": lpygame_win, "lpygame:win:run": lpygame_win_run, "lpygame:win:setdebug": lpygame_win_setdebug, "lpygame:win:debug": lpygame_win_debug, "lpygame:win:fps": lpygame_win_fps, 

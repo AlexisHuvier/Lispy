@@ -1,4 +1,4 @@
-from libraries.lpygame_src import *
+from libraries_src.lpygame_src import *
 from lispy.error import lispy_function
 
 

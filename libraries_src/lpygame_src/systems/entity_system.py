@@ -1,5 +1,5 @@
 import pygame
-from libraries.lpygame_src.utils import Font, Color
+from libraries_src.lpygame_src.utils import Font, Color
 
 
 class EntitySystem:

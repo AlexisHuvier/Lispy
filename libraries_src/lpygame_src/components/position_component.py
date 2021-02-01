@@ -1,5 +1,5 @@
-from libraries.lpygame_src.components.component import Component
-from libraries.lpygame_src.utils import Vec2
+from libraries_src.lpygame_src.components.component import Component
+from libraries_src.lpygame_src.utils import Vec2
 
 
 class PositionComponent(Component):

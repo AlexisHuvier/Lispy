@@ -1,6 +1,6 @@
 import pygame
-from libraries.lpygame_src.utils.color import Color
-from libraries.lpygame_src.utils.vec2 import Vec2
+from libraries_src.lpygame_src.utils.color import Color
+from libraries_src.lpygame_src.utils.vec2 import Vec2
 
 pygame.font.init()
 

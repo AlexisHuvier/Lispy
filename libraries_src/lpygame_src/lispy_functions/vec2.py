@@ -1,5 +1,5 @@
-from libraries.lpygame_src import *
-from libraries.lpygame_src.utils import *
+from libraries_src.lpygame_src import *
+from libraries_src.lpygame_src.utils import *
 from lispy.error import lispy_function
 
 @lispy_function("lpygame:vec2", ["int|float", "int|float"])

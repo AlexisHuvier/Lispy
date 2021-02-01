@@ -1,8 +1,8 @@
 import pygame
 import pygame.locals as pgconst
 import os
-from libraries.lpygame_src.utils import Font, Color
-from libraries.lpygame_src.world import World
+from libraries_src.lpygame_src.utils import Font, Color
+from libraries_src.lpygame_src.world import World
 
 pygame.init()
 

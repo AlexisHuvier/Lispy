@@ -1,4 +1,4 @@
-from libraries.lpygame_src.systems import *
+from libraries_src.lpygame_src.systems import *
 
 
 class World:

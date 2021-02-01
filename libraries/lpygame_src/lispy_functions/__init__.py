@@ -1,7 +1,0 @@
-from libraries.lpygame_src.lispy_functions.vec2 import *
-from libraries.lpygame_src.lispy_functions.window import *
-from libraries.lpygame_src.lispy_functions.color import *
-from libraries.lpygame_src.lispy_functions.font import *
-from libraries.lpygame_src.lispy_functions.world import *
-from libraries.lpygame_src.lispy_functions.entity_system import *
-from libraries.lpygame_src.lispy_functions.entity import *
