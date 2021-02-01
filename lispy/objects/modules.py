@@ -18,7 +18,8 @@ modules = {
     "list": {
         "list:join": list_join, "list:first": list_first, "list:last": list_last, "list:get": list_get, "list:len": list_len, "list:reverse": list_reverse,
         "list:in": list_in, "list:replace": list_replace, "list:sort": list_sort, "list:min": list_min, "list:max": list_max, "list:count": list_count, "list:clear": list_clear,
-        "list:range": list_range, "list:append": list_append, "list:remove": list_remove, "list:insert": list_insert, "list:sub": list_sub, "list:map": list_map, "list:filter": list_filter
+        "list:range": list_range, "list:append": list_append, "list:remove": list_remove, "list:insert": list_insert, "list:sub": list_sub, "list:map": list_map, "list:filter": list_filter,
+        "list:zip": list_zip
     },
     "stats": {
         "stats:mean": statistics_mean, "stats:median": statistics_median, "stats:mode": statistics_mode, "stats:variance": statistics_variance
@@ -48,5 +49,8 @@ modules = {
     "sqlite": {
         "sqlite:connect": sqlite_connect, "sqlite:executewithreturn": sqlite_executewithreturn, "sqlite:executewithoutreturn": sqlite_executewithoutreturn, "sqlite:reconnect": sqlite_reconnect, 
         "sqlite:disconnect": sqlite_disconnect
+    }, 
+    "dict": {
+        "dict:get": dict_get, "dict:haskey": dict_haskey, "dict:hasvalue": dict_hasvalue, "dict:set": dict_set, "dict:keys": dict_keys, "dict:items": dict_items, "dict:values": dict_values
     }
 }

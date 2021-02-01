@@ -7,3 +7,4 @@ from lispy.objects.modules_def.string import *
 from lispy.objects.modules_def.file import *
 from lispy.objects.modules_def.turtle import *
 from lispy.objects.modules_def.sqlite import *
+from lispy.objects.modules_def.dict import *
