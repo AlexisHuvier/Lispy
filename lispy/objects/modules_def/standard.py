@@ -72,6 +72,10 @@ def str_(args):
 def list_(*args):
     return list(args)
 
+@lispy_function("dict", ["list", "list"])
+def dict_(args):
+    return {i: v for i, v in zip(args[0], args[1])}
+
 @lispy_function("not", [""])
 def not_(args):
     return not args[0]
