@@ -1,0 +1,13 @@
+(
+    (import python:lpygame)
+    (def win (lpygame:win "Test" (lpygame:vec2 500 300)))
+    (lpygame:win:setcolor win (lpygame:color:fromname "white"))
+
+    (def e1 (lpygame:entity))
+    (lpygame:entity:addcomponent e1 (lpygame:components:position (lpygame:vec2 100 100)))
+    (lpygame:entity:addcomponent e1 (lpygame:components:text "Ceci est un test"))
+    (lpygame:entity:addcomponent e1 (lpygame:components:show))
+    (lpygame:entitysystem:addentity (lpygame:world:getsystem (lpygame:win:world win) "entity") e1)
+
+    (lpygame:win:run win)
+)
