@@ -25,6 +25,7 @@ A lisp-like language made with Python
   - input to get input from user
   - Conditions with if
   - Loop with for and while
+  - Get type of object with type
   - Import to import other lispy file or native module or python module
 
 - Native modules (import \<name>):

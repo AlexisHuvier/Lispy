@@ -79,3 +79,7 @@ def dict_(args):
 @lispy_function("not", [""])
 def not_(args):
     return not args[0]
+
+@lispy_function("type", [""])
+def type_(args):
+    return args[0].__class__.__name__
