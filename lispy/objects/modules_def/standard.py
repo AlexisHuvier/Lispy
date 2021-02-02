@@ -23,7 +23,7 @@ def mul(args):
 
 @lispy_function("/", ["", ""])
 def div(args):
-    return op.div(args[0], args[1])
+    return op.truediv(args[0], args[1])
 
 @lispy_function("//", ["", ""])
 def floordiv(args):
