@@ -37,7 +37,7 @@ class Env(dict):
     def standart(cls):
         env = Env()
         env.update({
-            '+':add, '-':sub, '*':mul, '/':div, '//': floordiv, '>':gt, '<':lt, '>=':ge, '<=':le, '=':eq, '%': mod, '!': not_, 'none': None, "dict": dict_,
+            '+':add, '-':sub, '*':mul, '/':div, '//': floordiv, '>':gt, '<':lt, '>=':ge, '<=':le, '=':eq, '%': mod, '!': not_, 'none': None, "dict": dict_, "assert": assert_,
             'display': print_advanced, "exit": exit, 'input': input_advanced, "int": int_, "float": float_, "str": str_, "list": list_, "true": True, "false": False, "type": type_
         })
         return env

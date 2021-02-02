@@ -1,5 +1,5 @@
 import operator as op
-from lispy.error import lispy_function
+from lispy.error import lispy_function, show_error
 import sys
 
 
@@ -83,3 +83,9 @@ def not_(args):
 @lispy_function("type", [""])
 def type_(args):
     return args[0].__class__.__name__
+
+@lispy_function("assert", [""])
+def assert_(args):
+    if not bool(args[0]):
+        show_error("AssertError", str(args[0])+ " is false.", True)
+        
