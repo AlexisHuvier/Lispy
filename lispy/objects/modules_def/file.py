@@ -51,3 +51,7 @@ def file_touch(args):
 @lispy_function("file:rename", ["str", "str"])
 def file_rename(args):
     os.rename(args[0], args[1])
+
+@lispy_function("file:listdir", ["str"])
+def file_listdir(args):
+    return os.listdir(args[0])
