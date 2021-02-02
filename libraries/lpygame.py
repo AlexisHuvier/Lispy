@@ -2,54 +2,44 @@ from libraries_src.lpygame_src.lispy_functions import *
 from libraries_src.lpygame_src.lispy_functions.components import *
 
 module = {
-    "lpygame:win": lpygame_win, "lpygame:win:run": lpygame_win_run, "lpygame:win:setdebug": lpygame_win_setdebug, "lpygame:win:debug": lpygame_win_debug, "lpygame:win:fps": lpygame_win_fps, 
-    "lpygame:win:setfps": lpygame_win_setfps, "lpygame:win:world": lpygame_win_world, "lpygame:win:setworld": lpygame_win_setworld, "lpygame:win:color": lpygame_win_color,
-    "lpygame:win:setcolor": lpygame_win_setcolor,
+    "lpg:win": lpg_win, "lpg:win:run": lpg_win_run, "lpg:win:setdebug": lpg_win_setdebug, "lpg:win:debug": lpg_win_debug, "lpg:win:setcolor": lpg_win_setcolor, 
+    "lpg:win:color": lpg_win_color, "lpg:win:fps": lpg_win_fps, "lpg:win:setfps": lpg_win_setfps, "lpg:win:world": lpg_win_world, "lpg:win:setworld": lpg_win_setworld,
 
 
-    "lpygame:world": lpygame_world, "lpygame:world:getsystem": lpygame_world_getsystem,
+    "lpg:world": lpg_world, "lpg:world:getsystem": lpg_world_getsystem,
 
 
-    "lpygame:entitysystem:addentity": lpygame_entitysystem_addentity, "lpygame:entitysystem:removeentity": lpygame_entitysystem_removeentity, 
-    "lpygame:entitysystem:getentity": lpygame_entitysystem_getentity, "lpygame:entitysystem:hasentity": lpygame_entitysystem_hasentity,
+    "lpg:es:add": lpg_es_add, "lpg:es:remove": lpg_es_remove, "lpg:es:get": lpg_es_get, "lpg:es:has": lpg_es_has,
 
 
-    "lpygame:entity": lpygame_entity, "lpygame:entity:addcomponent": lpygame_entity_addcomponent, "lpygame:entity:removecomponent": lpygame_entity_removecomponent, 
-    "lpygame:entity:hascomponent": lpygame_entity_hascomponent, "lpygame:entity:getcomponent": lpygame_entity_getcomponent,
+    "lpg:entity": lpg_entity, "lpg:entity:add": lpg_entity_add, "lpg:entity:remove": lpg_entity_remove, "lpg:entity:has": lpg_entity_has, "lpg:entity:get": lpg_entity_get,
 
 
-    "lpygame:components:show": lpygame_components_show, 
+    "lpg:comp:show": lpg_comp_show, 
 
-    "lpygame:components:text": lpygame_components_text, "lpygame:components:text:text": lpygame_components_text_text, "lpygame:components:text:settext": lpygame_components_text_settext, 
-    "lpygame:components:text:font": lpygame_components_text_font, "lpygame:components:text:setfont": lpygame_components_text_setfont, 
-    "lpygame:components:text:updaterender": lpygame_components_text_updaterender,
+    "lpg:comp:text": lpg_comp_text, "lpg:comp:text:text": lpg_comp_text_text, "lpg:comp:text:settext": lpg_comp_text_settext, "lpg:comp:text:font": lpg_comp_text_font, 
+    "lpg:comp:text:setfont": lpg_comp_text_setfont, "lpg:comp:text:update": lpg_comp_text_update,
 
-    "lpygame:components:position": lpygame_components_position, "lpygame:components:position:x": lpygame_components_position_x, "lpygame:components:position:y": lpygame_components_position_y, 
-    "lpygame:components:position:setx": lpygame_components_position_setx, "lpygame:components:position:sety": lpygame_components_position_sety, 
-    "lpygame:components:position:pos": lpygame_components_position_pos, "lpygame:components:position:setpos": lpygame_components_position_setpos,
+    "lpg:comp:position": lpg_comp_position, "lpg:comp:position:x": lpg_comp_position_x, "lpg:comp:position:y": lpg_comp_position_y, "lpg:comp:position:setx": lpg_comp_position_setx, 
+    "lpg:comp:position:sety": lpg_comp_position_sety, "lpg:comp:position:pos": lpg_comp_position_pos, "lpg:comp:position:setpos": lpg_comp_position_setpos,
 
-    "lpygame:components:sprite": lpygame_components_sprite, "lpygame:components:sprite:sprite": lpygame_components_sprite_sprite, 
-    "lpygame:components:sprite:setsprite": lpygame_components_sprite_setsprite, "lpygame:components:sprite:size": lpygame_components_sprite_size, 
-    "lpygame:components:sprite:setsize": lpygame_components_sprite_setsize, "lpygame:components:sprite:rotation": lpygame_components_sprite_rotation, 
-    "lpygame:components:sprite:setrotation": lpygame_components_sprite_setrotation, "lpygame:components:sprite:flipx": lpygame_components_sprite_flipx, 
-    "lpygame:components:sprite:setflipx": lpygame_components_sprite_setflipx, "lpygame:components:sprite:flipy": lpygame_components_sprite_flipy, 
-    "lpygame:components:sprite:setflipy": lpygame_components_sprite_setflipy, "lpygame:components:sprite:updateimage": lpygame_components_sprite_updateimage,
+    "lpg:comp:sprite": lpg_comp_sprite, "lpg:comp:sprite:sprite": lpg_comp_sprite_sprite, "lpg:comp:sprite:setsprite": lpg_comp_sprite_setsprite, "lpg:comp:sprite:size": lpg_comp_sprite_size, 
+    "lpg:comp:sprite:setsize": lpg_comp_sprite_setsize, "lpg:comp:sprite:rotation": lpg_comp_sprite_rotation, "lpg:comp:sprite:setrotation": lpg_comp_sprite_setrotation, 
+    "lpg:comp:sprite:flipx": lpg_comp_sprite_flipx, "lpg:comp:sprite:setflipx": lpg_comp_sprite_setflipx, "lpg:comp:sprite:flipy": lpg_comp_sprite_flipy, 
+    "lpg:comp:sprite:setflipy": lpg_comp_sprite_setflipy, "lpg:comp:sprite:updateimage": lpg_comp_sprite_updateimage,
 
 
-    "lpygame:font": lpygame_font, "lpygame:font:rendersize": lpygame_font_rendersize, "lpygame:font:name": lpygame_font_name, "lpygame:font:setname": lpygame_font_setname, 
-    "lpygame:font:size": lpygame_font_size, "lpygame:font:setsize": lpygame_font_setsize, "lpygame:font:bold": lpygame_font_bold, "lpygame:font:setbold": lpygame_font_setbold, 
-    "lpygame:font:italic": lpygame_font_italic, "lpygame:font:setitalic": lpygame_font_setitalic, "lpygame:font:underline": lpygame_font_underline, 
-    "lpygame:font:setunderline": lpygame_font_setunderline, "lpygame:font:antialias": lpygame_font_antialias, "lpygame:font:setantialias": lpygame_font_setantialias, 
-    "lpygame:font:color": lpygame_font_color, "lpygame:font:setcolor": lpygame_font_setcolor, "lpygame:font:background": lpygame_font_background, 
-    "lpygame:font:setbackground": lpygame_font_setbackground,
+    "lpg:font": lpg_font, "lpg:font:rendersize": lpg_font_rendersize, "lpg:font:name": lpg_font_name, "lpg:font:setname": lpg_font_setname, "lpg:font:size": lpg_font_size, 
+    "lpg:font:setsize": lpg_font_setsize, "lpg:font:bold": lpg_font_bold, "lpg:font:setbold": lpg_font_setbold, "lpg:font:italic": lpg_font_italic, "lpg:font:setitalic": lpg_font_setitalic, 
+    "lpg:font:underline": lpg_font_underline, "lpg:font:setunderline": lpg_font_setunderline, "lpg:font:antialias": lpg_font_antialias, "lpg:font:setantialias": lpg_font_setantialias, 
+    "lpg:font:color": lpg_font_color, "lpg:font:setcolor": lpg_font_setcolor, "lpg:font:background": lpg_font_background, "lpg:font:setbackground": lpg_font_setbackground,
 
 
-    "lpygame:vec2": lpygame_vec2, "lpygame:vec2:setx": lpygame_vec2_setx, "lpygame:vec2:x": lpygame_vec2_x, "lpygame:vec2:sety": lpygame_vec2_sety, "lpygame:vec2:y": lpygame_vec2_y, 
-    "lpygame:vec2:setcoords": lpygame_vec2_setcoords, "lpygame:vec2:coords": lpygame_vec2_coords, "lpygame:vec2:normalized": lpygame_vec2_normalized, "lpygame:vec2:zero": lpygame_vec2_zero, 
-    "lpygame:vec2:one": lpygame_vec2_one, 
+    "lpg:vec2": lpg_vec2, "lpg:vec2:setx": lpg_vec2_setx, "lpg:vec2:x": lpg_vec2_x, "lpg:vec2:sety": lpg_vec2_sety, "lpg:vec2:y": lpg_vec2_y, "lpg:vec2:setcoords": lpg_vec2_setcoords, 
+    "lpg:vec2:coords": lpg_vec2_coords, "lpg:vec2:normalized": lpg_vec2_normalized, "lpg:vec2:zero": lpg_vec2_zero, "lpg:vec2:one": lpg_vec2_one,
 
 
-    "lpygame:color": lpygame_color, "lpygame:color:fromname": lpygame_color_fromname, "lpygame:color:fromhtml": lpygame_color_fromhtml, "lpygame:color:fromcolor": lpygame_color_fromcolor, 
-    "lpygame:color:fromrgba": lpygame_color_fromrgba, "lpygame:color:fromrgb": lpygame_color_fromrgb, "lpygame:color:gethtml": lpygame_color_gethtml, 
-    "lpygame:color:getrgba": lpygame_color_getrgba, "lpygame:color:getrgb": lpygame_color_getrgb, "lpygame:color:lighter": lpygame_color_lighter, "lpygame:color:darker": lpygame_color_darker
+    "lpg:color": lpg_color, "lpg:color:fromname": lpg_color_fromname, "lpg:color:fromhtml": lpg_color_fromhtml, "lpg:color:fromcolor": lpg_color_fromcolor, 
+    "lpg:color:fromrgba": lpg_color_fromrgba, "lpg:color:fromrgb": lpg_color_fromrgb, "lpg:color:gethtml": lpg_color_gethtml, "lpg:color:getrgba": lpg_color_getrgba, 
+    "lpg:color:getrgb": lpg_color_getrgb, "lpg:color:lighter": lpg_color_lighter, "lpg:color:darker": lpg_color_darker
 }

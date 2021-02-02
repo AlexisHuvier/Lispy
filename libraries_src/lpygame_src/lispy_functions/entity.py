@@ -2,22 +2,22 @@ from libraries_src.lpygame_src import *
 from lispy.error import lispy_function
 
 
-@lispy_function("lpygame:entity")
-def lpygame_entity(args):
+@lispy_function("lpg:entity")
+def lpg_entity(args):
     return Entity()
 
-@lispy_function("lpygame:entity:addcomponent", ["Entity", "PositionComponent|ShowComponent|TextComponent|SpriteComponent"])
-def lpygame_entity_addcomponent(args):
+@lispy_function("lpg:entity:add", ["Entity", "PositionComponent|ShowComponent|TextComponent|SpriteComponent"])
+def lpg_entity_add(args):
     return args[0].add_component(args[1])
 
-@lispy_function("lpygame:entity:removecomponent", ["Entity", "str"])
-def lpygame_entity_removecomponent(args):
+@lispy_function("lpg:entity:remove", ["Entity", "str"])
+def lpg_entity_remove(args):
     return args[0].remove_component(args[1])
 
-@lispy_function("lpygame:entity:hascomponent", ["Entity", "str"])
-def lpygame_entity_hascomponent(args):
+@lispy_function("lpg:entity:has", ["Entity", "str"])
+def lpg_entity_has(args):
     return args[0].has_component(args[1])
 
-@lispy_function("lpygame:entity:getcomponent", ["Entity", "str"])
-def lpygame_entity_getcomponent(args):
+@lispy_function("lpg:entity:get", ["Entity", "str"])
+def lpg_entity_get(args):
     return args[0].get_component(args[1])
