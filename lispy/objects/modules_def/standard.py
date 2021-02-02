@@ -87,5 +87,5 @@ def type_(args):
 @lispy_function("assert", [""])
 def assert_(args):
     if not bool(args[0]):
-        show_error("AssertError", str(args[0])+ " is false.", True)
+        show_error("AssertError", "Test : "+str(args[0]), True)
         
