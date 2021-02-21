@@ -1,19 +1,19 @@
 (
     (import python:lpygame)
-    (def win (lpg:win "Test" (lpg:vec2 500 300)))
+    (def win (lpg:win:create "Test" (lpg:vec2:create 500 300)))
     (lpg:win:setcolor win (lpg:color:fromname "white"))
     (lpg:win:setdebug win true)
 
-    (def e1 (lpg:entity))
-    (lpg:entity:add e1 (lpg:comp:position (lpg:vec2 100 100)))
-    (lpg:entity:add e1 (lpg:comp:text "Ceci est un test"))
-    (lpg:entity:add e1 (lpg:comp:show false))
+    (def e1 (lpg:entity:create))
+    (lpg:entity:add e1 (lpg:comp:position:create (lpg:vec2:create 100 100)))
+    (lpg:entity:add e1 (lpg:comp:text:create "Ceci est un test"))
+    (lpg:entity:add e1 (lpg:comp:show:create false))
     (lpg:es:add (lpg:world:getsystem (lpg:win:world win) "entity") e1)
 
-    (def e2 (lpg:entity))
-    (lpg:entity:add e2 (lpg:comp:position (lpg:vec2 200 200)))
-    (lpg:entity:add e2 (lpg:comp:sprite "examples/files/sprite0.png"))
-    (lpg:entity:add e2 (lpg:comp:show true))
+    (def e2 (lpg:entity:create))
+    (lpg:entity:add e2 (lpg:comp:position:create (lpg:vec2:create 200 200)))
+    (lpg:entity:add e2 (lpg:comp:sprite:create "examples/files/sprite0.png"))
+    (lpg:entity:add e2 (lpg:comp:show:create true))
     (lpg:es:add (lpg:world:getsystem (lpg:win:world win) "entity") e2)
 
     (lpg:win:run win)

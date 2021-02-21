@@ -2,7 +2,7 @@ from libraries_src.lpygame_src import *
 from libraries_src.lpygame_src.utils import *
 from lispy.error import lispy_function
 
-@lispy_function("lpg:vec2", ["int|float", "int|float"], "Creating Vector2")
+@lispy_function("lpg:vec2:create", ["int|float", "int|float"], "Creating Vector2")
 def lpg_vec2(args):
     return Vec2(args[0], args[1])
 

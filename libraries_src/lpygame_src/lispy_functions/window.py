@@ -4,7 +4,7 @@ from lispy.error import lispy_function
 import math
 
 
-@lispy_function("lpg:win", ["str", "Vec2"], "Creating Window from name and Vector2")
+@lispy_function("lpg:win:create", ["str", "Vec2"], "Creating Window from name and Vector2")
 def lpg_win(args):
     return Window(args[0], args[1])
 

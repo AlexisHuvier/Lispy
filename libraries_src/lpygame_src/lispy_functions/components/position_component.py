@@ -2,7 +2,7 @@ from libraries_src.lpygame_src.components import *
 from lispy.error import lispy_function
 
 
-@lispy_function("lpg:comp:position", ["Vec2"], "Creating PositionComponent")
+@lispy_function("lpg:comp:position:create", ["Vec2"], "Creating PositionComponent")
 def lpg_comp_position(args):
     return PositionComponent(args[0])
 

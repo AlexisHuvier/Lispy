@@ -2,7 +2,7 @@ from libraries_src.lpygame_src import *
 from lispy.error import lispy_function
 
 
-@lispy_function("lpg:entity", [], "Create basic Entity")
+@lispy_function("lpg:entity:create", [], "Create basic Entity")
 def lpg_entity(args):
     return Entity()
 

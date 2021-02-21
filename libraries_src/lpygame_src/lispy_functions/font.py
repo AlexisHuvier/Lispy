@@ -3,7 +3,7 @@ from libraries_src.lpygame_src.utils import *
 from lispy.error import lispy_function
 
 
-@lispy_function("lpg:font", ["str", "int", "bool", "bool", "bool", "Color", "Color|NoneType", "bool"], "Create Font by name, size, bold, italic, underline, color, background and antialias")
+@lispy_function("lpg:font:create", ["str", "int", "bool", "bool", "bool", "Color", "Color|NoneType", "bool"], "Create Font by name, size, bold, italic, underline, color, background and antialias")
 def lpg_font(args):
     return Font(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7])
 

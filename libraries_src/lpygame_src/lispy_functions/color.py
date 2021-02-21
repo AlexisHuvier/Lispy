@@ -3,7 +3,7 @@ from libraries_src.lpygame_src.utils import *
 from lispy.error import lispy_function
 
 
-@lispy_function("lpg:color", [], "Creating basic Color")
+@lispy_function("lpg:color:create", [], "Creating basic Color")
 def lpg_color(args):
     return Color()
 

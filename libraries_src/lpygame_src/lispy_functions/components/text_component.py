@@ -2,7 +2,7 @@ from libraries_src.lpygame_src.components import *
 from lispy.error import lispy_function
 
 
-@lispy_function("lpg:comp:text", ["str"], "Creating TextComponent")
+@lispy_function("lpg:comp:text:create", ["str"], "Creating TextComponent")
 def lpg_comp_text(args):
     return TextComponent(args[0])
 
