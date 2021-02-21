@@ -1,2 +1,3 @@
 *.pyc
 get_format.py
+generate_docs.bat
