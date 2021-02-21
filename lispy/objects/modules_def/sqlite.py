@@ -31,26 +31,26 @@ class Database:
         self.connection.close()
 
 
-@lispy_function("sqlite:connect", ["str"])
+@lispy_function("sqlite:connect", ["str"], "Create Database object with connection")
 def sqlite_connect(args):
     return Database(args[0])
 
-@lispy_function("sqlite:executewithreturn", ["Database", "str", "list|NoneType"])
+@lispy_function("sqlite:executewithreturn", ["Database", "str", "list|NoneType"], "Execute query with return")
 def sqlite_executewithreturn(args):
     if args[2] is not None and len(args[2]):
         return args[0].executewithreturn(args[1], args[2])
     return args[0].executewithreturn(args[1])
 
-@lispy_function("sqlite:executewithoutreturn", ["Database", "str", "list|NoneType"])
+@lispy_function("sqlite:executewithoutreturn", ["Database", "str", "list|NoneType"], "Execute query without return")
 def sqlite_executewithoutreturn(args):
     if args[2] is not None and len(args[2]):
         return args[0].executewithoutreturn(args[1], args[2])
     return args[0].executewithoutreturn(args[1])
 
-@lispy_function("sqlite:reconnect", ["Database", "str"])
+@lispy_function("sqlite:reconnect", ["Database", "str"], "Reconnect from a Database object")
 def sqlite_reconnect(args):
     args[0].reconnect(args[1])
 
-@lispy_function("sqlite:disconnect", ["Database"])
+@lispy_function("sqlite:disconnect", ["Database"], "Disconnect a Database")
 def sqlite_disconnect(args):
     args[0].disconnect()

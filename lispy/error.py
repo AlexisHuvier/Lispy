@@ -22,10 +22,10 @@ def type_good(provided, expected):
                     return False
     return True
 
-def lispy_function(name_lispy="", arguments=[]):
+def lispy_function(name_lispy="", arguments=[], explaination=""):
     def decorator(func):
         def inner(*args):
-            if len(args) == len(arguments) and type_good(args, arguments):
+            if (len(arguments) == 1 and arguments[0] == "...") or (len(args) == len(arguments) and type_good(args, arguments)):
                 return func(args)
             else:
                 show_error("ArgumentError", f"Function : {name_lispy}\nArguments provided : {args}\nType provided : {[i.__class__.__name__ for i in args]}\nType Expected : {arguments}", True)
