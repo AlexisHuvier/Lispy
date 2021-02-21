@@ -16,7 +16,7 @@ class Lispy:
     def get_total_env(cls, env):
         temp = env
         temp.update({
-            'if': "built-in function", 'while': "built-in function", 'for': "built-in function", 'def': "built-in function", 'set': "built-in function", 'del': "built-in function",
+            'if': "built-in function", 'while': "built-in function", 'for': "built-in function", 'def': "built-in function", 'del': "built-in function",
             'import': "built-in function", 'func': "built-in function", 'ret': "built-in function"
         })
         return temp
@@ -59,9 +59,6 @@ class Lispy:
                 cls.lispy_eval(conseq, env)
             return None
         elif op == 'def':
-            symbol, exp = args
-            env[symbol] = cls.lispy_eval(exp, env)
-        elif op == 'set':
             symbol, exp = args
             env[symbol] = cls.lispy_eval(exp, env)
         elif op == 'del':
