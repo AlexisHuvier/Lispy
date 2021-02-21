@@ -13,7 +13,7 @@ def random_randint(args):
 def random_randrange(args):
     return random.randrange(args[0], args[1], args[2])
 
-@lispy_function("rand:random", "Return random value between 0 and 1")
+@lispy_function("rand:random", [], "Return random value between 0 and 1")
 def random_random(args):
     return random.random()
 
