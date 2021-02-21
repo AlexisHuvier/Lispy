@@ -9,7 +9,7 @@ class World:
         }
     
     def update(self):
-        pass
+        self.systems["entity"].update()
 
     def show(self):
         self.systems["entity"].show()
@@ -18,19 +18,19 @@ class World:
         self.systems["entity"].show_debug()
 
     def keypress(self, evt):
-        pass
+        self.systems["entity"].keypress(evt)
 
     def mousepress(self, evt):
-        pass
+        self.systems["entity"].mousepress(evt)
 
     def keyup(self, evt):
-        pass
+        self.systems["entity"].keyup(evt)
 
     def mousemotion(self, evt):
-        pass
+        self.systems["entity"].mousemotion(evt)
 
     def event(self, evt):
-        pass
+        self.systems["entity"].event(evt)
 
     def get_system(self, classe):
         if classe in self.systems.keys():

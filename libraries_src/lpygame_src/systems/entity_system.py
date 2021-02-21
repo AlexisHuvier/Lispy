@@ -1,12 +1,10 @@
 import pygame
-from libraries_src.lpygame_src.utils import Font, Color
 
 
 class EntitySystem:
     def __init__(self, world):
         self.world = world
         self.entities = []
-        self.debugfont = Font("arial", 15, False, False, False, Color.from_name("RED"), None, False)
 
     def get_entity(self, identity):
         for i in self.entities:
@@ -31,32 +29,34 @@ class EntitySystem:
         else:
             return "Entity has not in EntitySystem"
 
+    def event(self, evt):
+        for i in self.entities:
+            i.event(evt)
+
     def update(self):
         for i in self.entities:
             i.update()
 
     def keypress(self, evt):
-        pass
+        for i in self.entities:
+            i.keypress(evt)
 
     def keyup(self, evt):
-        pass
+        for i in self.entities:
+            i.keyup(evt)
 
     def mousepress(self, evt):
-        pass
+        for i in self.entities:
+            i.mousepress(evt)
 
     def mousemotion(self, evt):
-        pass
+        for i in self.entities:
+            i.mousemotion(evt)
 
     def show(self):
         for i in self.entities:
-            if i.has_component("ShowComponent"):
-                i.get_component("ShowComponent").show(self.world.window.screen)
+            i.show(self.world.window.screen)
 
     def show_debug(self):
         for i in self.entities:
-            if i.has_component("PositionComponent"):
-                pos = i.get_component("PositionComponent").pos()
-                render = self.debugfont.render("ID : "+str(i.identity))
-                self.world.window.screen.blit(render, (pos.x, pos.y - 20))
-            if i.has_component("ShowComponent"):
-                i.get_component("ShowComponent").show(self.world.window.screen)
+            i.show_debug(self.world.window.screen)

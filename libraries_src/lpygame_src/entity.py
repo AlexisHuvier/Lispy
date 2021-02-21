@@ -1,5 +1,8 @@
 import pygame
 
+from libraries_src.lpygame_src.utils import Font, Color
+
+
 class Entity(pygame.sprite.Sprite):
     def __init__(self):
         super(Entity, self).__init__()
@@ -7,6 +10,7 @@ class Entity(pygame.sprite.Sprite):
         self.components = set()
         self.system = None
         self.image = None
+        self.debugfont = Font("arial", 15, False, False, False, Color.from_name("RED"), None, False)
 
     def add_component(self, component):
         if isinstance(component, tuple(type(c) for c in self.components)):
@@ -39,7 +43,34 @@ class Entity(pygame.sprite.Sprite):
             pass
 
     def update(self):
-        pass
+        if self.has_component("ControlComponent"):
+            self.get_component("ControlComponent").update()
 
     def event(self, evt):
         pass
+
+    def keypress(self, evt):
+        if self.has_component("ControlComponent"):
+            self.get_component("ControlComponent").keypress(evt)
+
+    def keyup(self, evt):
+        if self.has_component("ControlComponent"):
+            self.get_component("ControlComponent").keyup(evt)
+
+    def mousepress(self, evt):
+        pass
+
+    def mousemotion(self, evt):
+        pass
+
+    def show(self, screen):
+        if self.has_component("ShowComponent"):
+            self.get_component("ShowComponent").show(screen)
+
+    def show_debug(self, screen):
+        if self.has_component("PositionComponent"):
+            pos = self.get_component("PositionComponent").pos()
+            render = self.debugfont.render("ID : "+str(self.identity))
+            screen.blit(render, (pos.x, pos.y - 20))
+        if self.has_component("ShowComponent"):
+            self.get_component("ShowComponent").show(screen)

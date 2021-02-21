@@ -14,6 +14,7 @@
     (lpg:entity:add e2 (lpg:comp:position:create (lpg:vec2:create 200 200)))
     (lpg:entity:add e2 (lpg:comp:sprite:create "examples/files/sprite0.png"))
     (lpg:entity:add e2 (lpg:comp:show:create true))
+    (lpg:entity:add e2 (lpg:comp:control:create "FOURDIRECTION"))
     (lpg:es:add (lpg:world:getsystem (lpg:win:world win) "entity") e2)
 
     (lpg:win:run win)

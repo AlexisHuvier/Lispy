@@ -28,6 +28,9 @@ module = {
     "lpg:comp:sprite:flipx": lpg_comp_sprite_flipx, "lpg:comp:sprite:setflipx": lpg_comp_sprite_setflipx, "lpg:comp:sprite:flipy": lpg_comp_sprite_flipy, 
     "lpg:comp:sprite:setflipy": lpg_comp_sprite_setflipy, "lpg:comp:sprite:updateimage": lpg_comp_sprite_updateimage,
 
+    "lpg:comp:control:create": lpg_comp_control, "lpg:comp:control:speed": lpg_comp_control_speed, "lpg:comp:control:setspeed": lpg_comp_control_setspeed, "lpg:comp:control:type": lpg_comp_control_type,
+    "lpg:comp:control:settype": lpg_comp_control_settype,
+
 
     "lpg:font:create": lpg_font, "lpg:font:rendersize": lpg_font_rendersize, "lpg:font:name": lpg_font_name, "lpg:font:setname": lpg_font_setname, "lpg:font:size": lpg_font_size, 
     "lpg:font:setsize": lpg_font_setsize, "lpg:font:bold": lpg_font_bold, "lpg:font:setbold": lpg_font_setbold, "lpg:font:italic": lpg_font_italic, "lpg:font:setitalic": lpg_font_setitalic, 
