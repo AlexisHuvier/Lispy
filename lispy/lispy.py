@@ -4,10 +4,13 @@ from lispy.objects import Procedure
 from lispy.error import show_error
 
 import os
+import traceback
 import sys
 
 
 class Lispy:
+    debug = False
+
     @classmethod
     def lispy_eval_with_parsing(cls, exp, env=Env.standart()):
         return cls.lispy_eval(Parser.parse(exp), env)
@@ -76,5 +79,7 @@ class Lispy:
             try:
                 return proc(*vals)
             except Exception as e:
+                if Lispy.debug:
+                    traceback.print_exc()
                 show_error(e.__class__.__name__, f"Error : {str(e).capitalize()}\nProc : {op} ( {proc} )\nValues : {args} ( {vals} )", True)
                 
