@@ -10,7 +10,7 @@ modules = {
         "math:comb": math_comb, "math:abs": math_abs, "math:isfinite": math_isfinite, "math:isinf": math_isinf, "math:isnan": math_isnan, "math:perm": math_perm, "math:trunc": math_trunc,
         "math:exp": math_exp, "math:log": math_log, "math:log10": math_log10, "math:pow": math_pow, "math:sqrt": math_sqrt, "math:acos": math_acos, "math:asin": math_asin, 
         "math:atan": math_atan, "math:atan2": math_atan2, "math:cos": math_cos, "math:sin": math_sin, "math:tan": math_tan, "math:degrees": math_degrees, "math:radians": math_radians,
-        "math:clamp": math_clamp
+        "math:clamp": math_clamp, "math:odd": math_odd, "math:even": math_even, "math:divs": math_divs,
     },
     "rand": {
         "rand:randint": random_randint, "rand:randrange": random_randrange, "rand:choice": random_choice, "rand:random": random_random, "rand:uniform": random_uniform
@@ -19,7 +19,7 @@ modules = {
         "list:join": list_join, "list:first": list_first, "list:last": list_last, "list:get": list_get, "list:len": list_len, "list:reverse": list_reverse,
         "list:in": list_in, "list:replace": list_replace, "list:sort": list_sort, "list:min": list_min, "list:max": list_max, "list:count": list_count, "list:clear": list_clear,
         "list:range": list_range, "list:append": list_append, "list:remove": list_remove, "list:insert": list_insert, "list:sub": list_sub, "list:map": list_map, "list:filter": list_filter,
-        "list:zip": list_zip
+        "list:zip": list_zip, "list:+": list_sum, "list:set": list_set,
     },
     "stats": {
         "stats:mean": statistics_mean, "stats:median": statistics_median, "stats:mode": statistics_mode, "stats:variance": statistics_variance
@@ -30,7 +30,7 @@ modules = {
         "str:capitalize": str_capitalize, "str:title": str_title, "str:endswith": str_endswith, "str:startswith": str_startswith, "str:isalnum": str_isalnum, 
         "str:isalpha": str_isalpha, "str:isascii": str_isascii, "str:isdecimal": str_isdecimal, "str:isdigit": str_isdigit, "str:isidentifier": str_isidentifier, "str:islower": str_islower, 
         "str:isnumeric": str_isnumeric, "str:isprintable": str_isprintable, "str:isspace": str_isspace, "str:istitle": str_istitle, "str:isupper": str_isupper, "str:lower": str_lower,
-        "str:upper": str_upper, "str:split": str_split
+        "str:upper": str_upper, "str:split": str_split, "str:reverse": str_reverse, "str:replace": str_replace, "str:sub": str_sub,
     },
     "file": {
         "file:read": file_read, "file:readlines": file_readlines, "file:write": file_write, "file:append": file_append, "file:exists": file_exists, "file:isdir": file_isdir, 

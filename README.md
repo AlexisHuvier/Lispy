@@ -13,7 +13,7 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
 ## Installation
 
 - Download last release or master (unstable)
-- Launch any lispy file with `python .\Lispy.py <file>.lpy` or launch interpreter with `python .\Lispy.py`
+- Launch any lispy file with `python .\Lispy.py <file>.lpy [--debug]` or launch interpreter with `python .\Lispy.py [--debug]`
 - Enjoy
 
 ## Features
@@ -33,10 +33,10 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
 
 - Native modules (import \<name>):
 
-  - str : Manage string (9 constants, 19 functions)
-  - list : Manage list (21 functions)
+  - str : Manage string (9 constants, 22 functions)
+  - list : Manage list (23 functions)
   - dict : Manage dictionnary (7 functions)
-  - math : Many functions and constants for mathematics (5 constants, 24 functions)
+  - math : Many functions and constants for mathematics (5 constants, 27 functions)
   - stats : Get mean, median, mode and variance (4 functions)
   - rand : Get random numbers or choice in list (5 functions)
   - file : Manage, read or write file (11 functions)
@@ -45,7 +45,7 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
 
 - Additive modules (import \<python:name>):
 
-  - lpygame : Based on python's pygame (WIP) (77 functions) (must install pygame)
+  - lpygame : Based on python's pygame (WIP) (82 functions) (must install pygame)
   - lrequests : Based on python's requests (WIP) (8 functions) (must install requests)
 
 ## Changelog

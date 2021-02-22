@@ -75,3 +75,15 @@ def str_upper(args):
 @lispy_function("str:split", ["str", "str"], "Return splitted string by other string")
 def str_split(args):
     return args[0].split(args[1])
+
+@lispy_function("str:reverse", ["str"], "Return reversed string")
+def str_reverse(args):
+    args[0].reverse()
+
+@lispy_function("str:sub", ["str", "int", "int"], "Return substring with start index and en index")
+def str_sub(args):
+    return args[0][args[1]:args[2]]
+
+@lispy_function("str:replace", ["str", "str", "str"], "Replace part of a string by a another string")
+def str_replace(args):
+    return args[0].replace(args[1], args[2])

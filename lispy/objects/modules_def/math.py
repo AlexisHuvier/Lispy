@@ -118,3 +118,22 @@ def math_degrees(args):
 @lispy_function("math:radians", ["int|float"], "Return radians value")
 def math_radians(args):
     return math.radians(args[0])
+
+@lispy_function("math:odd", ["int|float"], "Return if value is odd")
+def math_odd(args):
+    return args[0] % 2 == 1
+
+@lispy_function("math:even", ["int|float"], "Return if value is even")
+def math_even(args):
+    return args[0] % 2 == 0
+
+@lispy_function("math:divs", ["int|float"], "Return divisors of value")
+def math_divs(args):
+    divs = []
+    for i in range(1, int(math.sqrt(args[0]) + 1)):
+        if args[0] % i == 0:
+            divs.append(i)
+            if i*i != args[0]:
+                divs.append(int(args[0] / i))
+    divs.sort()
+    return divs

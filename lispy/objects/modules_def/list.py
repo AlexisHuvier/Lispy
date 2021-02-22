@@ -61,11 +61,11 @@ def list_sort(args):
 
 @lispy_function("list:reverse", ["list"], "Reverse list")
 def list_reverse(args):
-    return args[0].reverse()
+    args[0].reverse()
 
 @lispy_function("list:clear", ["list"], "Clear list")
 def list_clear(args):
-    return args[0].clear()
+    args[0].clear()
 
 @lispy_function("list:min", ["list"], "Return minimum of list")
 def list_min(args):
@@ -90,3 +90,17 @@ def list_filter(args):
 @lispy_function("list:zip", ["list", "list"], "Zip lists together")
 def list_zip(args):
     return list(zip(args[0], args[1]))
+
+@lispy_function("list:set", ["list", "int", ""], "Setting a value of list by index")
+def list_set(args):
+    args[0][args[1]] = args[2]
+
+@lispy_function("list:+", ["list"], "Adding values of list")
+def list_sum(args):
+    total = 0
+    for i in args[0]:
+        if total == 0:
+            total = i
+        else:
+            total += i
+    return total
