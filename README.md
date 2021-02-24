@@ -39,9 +39,9 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
   - math : Many functions and constants for mathematics (5 constants, 27 functions)
   - stats : Get mean, median, mode and variance (4 functions)
   - rand : Get random numbers or choice in list (5 functions)
-  - file : Manage, read or write file (11 functions)
   - sys : Get internal system informations (3 functions)
   - os : Some operations with operating system (5 functions)
+  - path : Manage, read or write file, directory or path (12 functions)
   - turtle : Based on python's turtle (36 functions)
   - sqlite : Connection with sqlite DB (5 functions)
 

@@ -32,9 +32,9 @@ modules = {
         "str:isnumeric": str_isnumeric, "str:isprintable": str_isprintable, "str:isspace": str_isspace, "str:istitle": str_istitle, "str:isupper": str_isupper, "str:lower": str_lower,
         "str:upper": str_upper, "str:split": str_split, "str:reverse": str_reverse, "str:replace": str_replace, "str:sub": str_sub,
     },
-    "file": {
-        "file:read": file_read, "file:readlines": file_readlines, "file:write": file_write, "file:append": file_append, "file:exists": file_exists, "file:isdir": file_isdir, 
-        "file:isfile": file_isfile, "file:remove": file_remove, "file:touch": file_touch, "file:rename": file_rename, "file:listdir": file_listdir,
+    "path": {
+        "path:read": path_read, "path:readlines": path_readlines, "path:write": path_write, "path:append": path_append, "path:exists": path_exists, "path:isdir": path_isdir, 
+        "path:isfile": path_isfile, "path:remove": path_remove, "path:touch": path_touch, "path:rename": path_rename, "path:listdir": path_listdir, "path:makedirs": path_makedirs
     },
     "turtle": {
         "turtle:forward": turtle_forward, "turtle:back": turtle_back, "turtle:right": turtle_right, "turtle:left": turtle_left, "turtle:setpos": turtle_setpos, 
