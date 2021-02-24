@@ -52,5 +52,8 @@ modules = {
     }, 
     "dict": {
         "dict:get": dict_get, "dict:haskey": dict_haskey, "dict:hasvalue": dict_hasvalue, "dict:set": dict_set, "dict:keys": dict_keys, "dict:items": dict_items, "dict:values": dict_values
+    },
+    "sys": {
+        "sys:version": sys_version, "sys:platform": sys_platform, "sys:pyversion": sys_pyversion
     }
 }

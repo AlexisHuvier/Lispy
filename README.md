@@ -40,6 +40,7 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
   - stats : Get mean, median, mode and variance (4 functions)
   - rand : Get random numbers or choice in list (5 functions)
   - file : Manage, read or write file (11 functions)
+  - sys : Get internal system informations (3 functions)
   - turtle : Based on python's turtle (36 functions)
   - sqlite : Connection with sqlite DB (5 functions)
 
