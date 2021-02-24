@@ -55,5 +55,8 @@ modules = {
     },
     "sys": {
         "sys:version": sys_version, "sys:platform": sys_platform, "sys:pyversion": sys_pyversion
+    },
+    "os": {
+        "os:name": os_name, "os:getpid": os_getpid, "os:terminalsize": os_terminalsize, "os:chdir": os_chdir, "os:getcwd": os_getcwd
     }
 }
