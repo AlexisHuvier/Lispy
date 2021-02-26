@@ -13,9 +13,8 @@
     (def complexCollision (lpg:comp:collision:create))
     (lpg:comp:collision:setsolid complexCollision false)
     (lpg:comp:collision:setcallback complexCollision (
-        func (entity cause) (
-            (display entity)
-            (display cause)
+        func (entity other cause) (
+            (lpg:es:remove (lpg:world:getsystem (lpg:win:world win) "entity") other)
         )
     ))
 

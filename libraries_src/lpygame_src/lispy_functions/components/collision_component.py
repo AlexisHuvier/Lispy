@@ -18,6 +18,6 @@ def lpg_comp_collision_setsolid(args):
 def lpg_comp_collision_callback(args):
     return args[0].callback
 
-@lispy_function("lpg:comp:collision:setcallback", ["CollisionComponent", "Procedure"], "Setting collision callback with entity and cause as args")
+@lispy_function("lpg:comp:collision:setcallback", ["CollisionComponent", "Procedure"], "Setting collision callback with entity, other entity and cause as args")
 def lpg_comp_collision_setcallback(args):
     args[0].callback = args[1]

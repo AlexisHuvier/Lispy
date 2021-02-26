@@ -17,7 +17,7 @@ class CollisionComponent(Component):
                 other_rect = entity.get_component("SpriteComponent").transformed_image.get_rect(x=position.x, y=position.y)
                 if rect.colliderect(other_rect):
                     if self.callback:
-                        self.callback(entity, cause)
+                        self.callback(self.entity, entity, cause)
                     
                     if entity.get_component("CollisionComponent").solid and self.solid:
                         return False
