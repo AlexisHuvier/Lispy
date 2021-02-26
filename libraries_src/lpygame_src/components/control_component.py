@@ -26,24 +26,33 @@ class ControlComponent(Component):
 
     def move(self, key):
         pos = self.entity.get_component("PositionComponent").pos()
+        cause = "UNKNOWN"
         if key == self.controls["UP"]:
             if self.control_type in ("FOURDIRECTION", "UPDOWN"):
                 pos.y -= self.speed
+                cause = "UPCONTROL"
 
         elif key == self.controls["DOWN"]:
             if self.control_type in ("FOURDIRECTION", "UPDOWN"):
                 pos.y += self.speed
+                cause = "DOWNCONTROL"
         
         elif key == self.controls["LEFT"]:
             if self.control_type in ("FOURDIRECTION", "LEFTRIGHT"):
                 pos.x -= self.speed
+                cause = "LEFTCONTROL"
         
         elif key == self.controls["RIGHT"]:
             if self.control_type in ("FOURDIRECTION", "LEFTRIGHT"):
                 pos.x += self.speed
+                cause = "RIGHTCONTROL"
         
         if pos != self.entity.get_component("PositionComponent").pos():
-            self.entity.get_component("PositionComponent").set_pos(pos)
+            if self.entity.has_component("CollisionComponent"):
+                if self.entity.get_component("CollisionComponent").can_go(pos, cause):
+                    self.entity.get_component("PositionComponent").set_pos(pos)
+            else:
+                self.entity.get_component("PositionComponent").set_pos(pos)
         
     def keyup(self, evt):
         if evt.key in self.keypressed:

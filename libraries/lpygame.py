@@ -31,6 +31,9 @@ module = {
     "lpg:comp:control:create": lpg_comp_control, "lpg:comp:control:speed": lpg_comp_control_speed, "lpg:comp:control:setspeed": lpg_comp_control_setspeed, "lpg:comp:control:type": lpg_comp_control_type,
     "lpg:comp:control:settype": lpg_comp_control_settype,
 
+    "lpg:comp:collision:create": lpg_comp_collision, "lpg:comp:collision:solid": lpg_comp_collision_solid, "lpg:comp:collision:setsolid": lpg_comp_collision_setsolid,
+    "lpg:comp:collision:callback": lpg_comp_collision_callback, "lpg:comp:collision:setcallback": lpg_comp_collision_setcallback,
+
 
     "lpg:font:create": lpg_font, "lpg:font:rendersize": lpg_font_rendersize, "lpg:font:name": lpg_font_name, "lpg:font:setname": lpg_font_setname, "lpg:font:size": lpg_font_size, 
     "lpg:font:setsize": lpg_font_setsize, "lpg:font:bold": lpg_font_bold, "lpg:font:setbold": lpg_font_setbold, "lpg:font:italic": lpg_font_italic, "lpg:font:setitalic": lpg_font_setitalic, 
