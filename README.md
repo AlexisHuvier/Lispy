@@ -47,7 +47,7 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
 
 - Additive modules (import \<python:name>):
 
-  - lpygame : Based on python's pygame (WIP) (82 functions) (must install pygame)
+  - lpygame : Based on python's pygame (WIP) (83 functions) (must install pygame)
   - lrequests : Based on python's requests (WIP) (8 functions) (must install requests)
 
 ## Changelog
