@@ -1,4 +1,5 @@
 import sys
+import asyncio
 
 def show_error(type_, message, must_exit):
     print("ERROR :", type_)
@@ -22,11 +23,19 @@ def type_good(provided, expected):
                     return False
     return True
 
-def lispy_function(name_lispy="", arguments=[], explaination=""):
+def lispy_function(name_lispy="", arguments=[], explaination="", must_async=False):
     def decorator(func):
         def inner(*args):
             if (len(arguments) == 1 and arguments[0] == "...") or (len(args) == len(arguments) and type_good(args, arguments)):
-                return func(args)
+                if must_async:
+                    if asyncio.get_running_loop() is not None:
+                        return asyncio.get_running_loop().create_task(func(args))
+                    else:
+                        loop = asyncio.get_event_loop()
+                        asyncio.set_event_loop(loop)
+                        return loop.run_until_complete(func(args))
+                else:
+                    return func(args)
             else:
                 show_error("ArgumentError", f"Function : {name_lispy}\nArguments provided : {args}\nType provided : {[i.__class__.__name__ for i in args]}\nType Expected : {arguments}", True)
         return inner
