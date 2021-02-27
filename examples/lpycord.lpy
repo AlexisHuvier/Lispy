@@ -1,0 +1,30 @@
+(
+    (import python:lpycord)
+    (import path)
+
+    (def token (path:read "bot_token.txt"))
+
+    (def bot (lpycord:bot:create "b!"))
+
+    (def helpembed (lpycord:embed:create))
+    (lpycord:embed:settitle helpembed "List of Commands")
+    (lpycord:embed:setdescription helpembed "List of Bot commands")
+    (lpycord:embed:addfield helpembed "b!help" "Show this menu.")
+    (lpycord:embed:addfield helpembed "b!ping" "Reply PONG.")
+
+    (def helpcommand (lpycord:command:create "help" (
+        func (bot, message) (
+            (lpycord:textchan:sendembed (lpycord:message:channel message) helpembed)
+        )
+    )))
+    (def pingcommand (lpycord:command:create "ping" (
+        func (bot, message) (
+            (lpycord:message:reply message "PONG")
+        )
+    )))
+
+    (lpycord:bot:addcommand bot helpcommand)
+    (lpycord:bot:addcommand bot pingcommand)
+
+    (lpycord:bot:run bot token)
+)
