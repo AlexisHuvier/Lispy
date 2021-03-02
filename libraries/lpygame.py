@@ -34,6 +34,9 @@ module = {
     "lpg:comp:collision:create": lpg_comp_collision, "lpg:comp:collision:solid": lpg_comp_collision_solid, "lpg:comp:collision:setsolid": lpg_comp_collision_setsolid,
     "lpg:comp:collision:callback": lpg_comp_collision_callback, "lpg:comp:collision:setcallback": lpg_comp_collision_setcallback,
 
+    "lpg:comp:physics:create": lpg_comp_physics, "lpg:comp:physics:gravity": lpg_comp_physics_gravity, "lpg:comp:physics:maxgravity": lpg_comp_physics_maxgravity,
+    "lpg:comp:physics:setgravity": lpg_comp_physics_setgravity, "lpg:comp:physics:setmaxgravity": lpg_comp_physics_setmaxgravity,    
+
 
     "lpg:font:create": lpg_font, "lpg:font:rendersize": lpg_font_rendersize, "lpg:font:name": lpg_font_name, "lpg:font:setname": lpg_font_setname, "lpg:font:size": lpg_font_size, 
     "lpg:font:setsize": lpg_font_setsize, "lpg:font:bold": lpg_font_bold, "lpg:font:setbold": lpg_font_setbold, "lpg:font:italic": lpg_font_italic, "lpg:font:setitalic": lpg_font_setitalic, 

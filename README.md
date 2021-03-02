@@ -47,7 +47,7 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
 
 - Additive modules (import \<python:name>):
 
-  - lpygame : Make you own game based on python's pygame (WIP) (83 functions) (must install pygame)
+  - lpygame : Make you own game based on python's pygame (WIP) (87 functions) (must install pygame)
   - lrequests : Based on python's requests (WIP) (8 functions) (must install requests)
   - lpycord : Make you own discord bot (WIP) (51 functions) (must install discord.py)
 

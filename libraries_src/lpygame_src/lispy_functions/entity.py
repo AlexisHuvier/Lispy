@@ -6,7 +6,7 @@ from lispy.error import lispy_function
 def lpg_entity(args):
     return Entity()
 
-@lispy_function("lpg:entity:add", ["Entity", "PositionComponent|ShowComponent|TextComponent|SpriteComponent|ControlComponent|CollisionComponent"], "Adding Component to Entity")
+@lispy_function("lpg:entity:add", ["Entity", "PositionComponent|ShowComponent|TextComponent|SpriteComponent|ControlComponent|CollisionComponent|PhysicsComponent"], "Adding Component to Entity")
 def lpg_entity_add(args):
     return args[0].add_component(args[1])
 

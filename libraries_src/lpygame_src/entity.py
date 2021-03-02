@@ -45,6 +45,8 @@ class Entity(pygame.sprite.Sprite):
     def update(self):
         if self.has_component("ControlComponent"):
             self.get_component("ControlComponent").update()
+        if self.has_component("PhysicsComponent"):
+            self.get_component("PhysicsComponent").update()
 
     def event(self, evt):
         pass

@@ -4,3 +4,4 @@ from libraries_src.lpygame_src.components.text_component import TextComponent
 from libraries_src.lpygame_src.components.sprite_component import SpriteComponent
 from libraries_src.lpygame_src.components.control_component import ControlComponent
 from libraries_src.lpygame_src.components.collision_component import CollisionComponent
+from libraries_src.lpygame_src.components.physics_component import PhysicsComponent
