@@ -13,12 +13,12 @@
     (lpycord:embed:addfield helpembed "b!ping" "Reply PONG.")
 
     (def helpcommand (lpycord:command:create "help" (
-        func (bot, message) (
+        func (bot message) (
             (lpycord:textchan:sendembed (lpycord:message:channel message) helpembed)
         )
     )))
     (def pingcommand (lpycord:command:create "ping" (
-        func (bot, message) (
+        func (bot message) (
             (lpycord:message:reply message "PONG")
         )
     )))
