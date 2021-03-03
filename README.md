@@ -44,6 +44,7 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
   - path : Manage, read or write file, directory or path (12 functions)
   - turtle : Based on python's turtle (36 functions)
   - sqlite : Connection with sqlite DB (5 functions)
+  - csv : Read, Write and Manage CSV File (19 functions)
 
 - Additive modules (import \<python:name>):
 

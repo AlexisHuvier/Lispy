@@ -1,0 +1,6 @@
+(
+    (import csv)
+    (def dialect (csv:dialect:create))
+    (csv:dialect:setdelimiter dialect ";")
+    (display (csv:read "examples/files/test.csv" dialect))
+)

@@ -58,5 +58,13 @@ modules = {
     },
     "os": {
         "os:name": os_name, "os:getpid": os_getpid, "os:terminalsize": os_terminalsize, "os:chdir": os_chdir, "os:getcwd": os_getcwd
+    },
+    "csv": {
+        "csv:read": csv_read, "csv:write": csv_write, "csv:regdialect": csv_regdialect, "csv:unregdialect": csv_unregdialect, "csv:getdialect": csv_getdialect, 
+        "csv:finddialect": csv_finddialect, "csv:hasheader": csv_hasheader, "csv:dialect:create": csv_dialect_create, "csv:dialect:delimiter": csv_dialect_delimiter, 
+        "csv:dialect:setdelimiter": csv_dialect_setdelimiter, "csv:dialect:quotechar": csv_dialect_quotechar, "csv:dialect:setquotechar": csv_dialect_setquotechar, 
+        "csv:dialect:escapechar": csv_dialect_escapechar, "csv:dialect:setescapechar": csv_dialect_setescapechar, "csv:dialect:doublequote": csv_dialect_doublequote, 
+        "csv:dialect:setdoublequote": csv_dialect_setdoublequote, "csv:dialect:skipinitialspace": csv_dialect_skipinitialspace, 
+        "csv:dialect:setskipinitialspace": csv_dialect_setskipinitialspace, "csv:dialect:str": csv_dialect_str
     }
 }
