@@ -6,6 +6,46 @@ from libraries_src.lpycord_src import Bot
 def lpycord_bot_create(args):
     return Bot(args[0])
 
+@lispy_function("lpycord:bot:latency", ["Bot"], "Measuring latency between a HEARTBEAT and a HEARTBEAT_ACK in seconds")
+def lpycord_bot_latency(args):
+    return args[0].latency
+
+@lispy_function("lpycord:bot:user", ["Bot"], "Getting user of bot (if connected or None)")
+def lpycord_bot_user(args):
+    return args[0].user
+
+@lispy_function("lpycord:bot:guilds", ["Bot"], "Getting guilds of Bot")
+def lpycord_bot_guilds(args):
+    return args[0].guilds
+
+@lispy_function("lpycord:bot:isready", ["Bot"], "Returning if bot's cache is ready")
+def lpycord_bot_isready(args):
+    return args[0].is_ready()
+
+@lispy_function("lpycord:bot:close", ["Bot"], "Closing Bot")
+def lpycord_bot_close(args):
+    args[0].close()
+
+@lispy_function("lpycord:bot:getchannel", ["Bot", "int"], "Getting a channel by id")
+def lpycord_bot_getchannel(args):
+    return args[0].get_channel(args[1])
+
+@lispy_function("lpycord:bot:getguild", ["Bot", "int"], "Getting a guild by id")
+def lpycord_bot_getguild(args):
+    return args[0].get_guild(args[1])
+
+@lispy_function("lpycord:bot:getuser", ["Bot", "int"], "Getting a user by id")
+def lpycord_bot_getuser(args):
+    return args[0].get_user(args[1])
+
+@lispy_function("lpycord:bot:getemoji", ["Bot", "int"], "Getting a emoji by id")
+def lpycord_bot_getemoji(args):
+    return args[0].get_emoji(args[1])
+
+@lispy_function("lpycord:bot:users", ["Bot"], "Getting users of Bot")
+def lpycord_bot_users(args):
+    return args[0].users
+
 @lispy_function("lpycord:bot:addcommand", ["Bot", "Command"], "Adding command to bot")
 def lpycord_bot_addcommand(args):
     args[0].commands.append(args[1])

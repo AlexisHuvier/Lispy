@@ -2,7 +2,10 @@ from libraries_src.lpycord_src.lispy_functions import *
 
 module = {
     "lpycord:bot:create": lpycord_bot_create, "lpycord:bot:run": lpycord_bot_run, "lpycord:bot:addcommand": lpycord_bot_addcommand, "lpycord:bot:removecommand": lpycord_bot_removecommand,
-    "lpycord:bot:prefix": lpycord_bot_prefix, "lpycord:bot:setprefix": lpycord_bot_setprefix, "lpycord:bot:commands": lpycord_bot_commands,
+    "lpycord:bot:prefix": lpycord_bot_prefix, "lpycord:bot:setprefix": lpycord_bot_setprefix, "lpycord:bot:commands": lpycord_bot_commands, "lpycord:bot:latency": lpycord_bot_latency, 
+    "lpycord:bot:user": lpycord_bot_user, "lpycord:bot:guilds": lpycord_bot_guilds, "lpycord:bot:isready": lpycord_bot_isready, "lpycord:bot:close": lpycord_bot_close, 
+    "lpycord:bot:getchannel": lpycord_bot_getchannel, "lpycord:bot:getguild": lpycord_bot_getguild, "lpycord:bot:getuser": lpycord_bot_getuser, "lpycord:bot:getemoji": lpycord_bot_getemoji, 
+    "lpycord:bot:users": lpycord_bot_users,
 
     "lpycord:command:create": lpycord_command_create, "lpycord:command:name": lpycord_command_name, "lpycord:command:setname": lpycord_command_setname,
     "lpycord:command:callback": lpycord_command_callback, "lpycord:command:setcallback": lpycord_command_setcallback,
