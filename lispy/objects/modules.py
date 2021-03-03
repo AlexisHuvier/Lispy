@@ -66,5 +66,8 @@ modules = {
         "csv:dialect:escapechar": csv_dialect_escapechar, "csv:dialect:setescapechar": csv_dialect_setescapechar, "csv:dialect:doublequote": csv_dialect_doublequote, 
         "csv:dialect:setdoublequote": csv_dialect_setdoublequote, "csv:dialect:skipinitialspace": csv_dialect_skipinitialspace, 
         "csv:dialect:setskipinitialspace": csv_dialect_setskipinitialspace, "csv:dialect:str": csv_dialect_str
+    },
+    "webbrowser": {
+        "webbrowser:open": webbrowser_open, "webbrowser:opentab": webbrowser_opentab, "webbrowser:openwindow": webbrowser_openwindow
     }
 }

@@ -11,3 +11,4 @@ from lispy.objects.modules_def.dict import *
 from lispy.objects.modules_def.sys import *
 from lispy.objects.modules_def.os import *
 from lispy.objects.modules_def.csv import *
+from lispy.objects.modules_def.webbrowser import *
