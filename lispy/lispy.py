@@ -81,5 +81,5 @@ class Lispy:
             except Exception as e:
                 if Lispy.debug:
                     traceback.print_exc()
-                show_error(e.__class__.__name__, f"Error : {str(e).capitalize()}\nProc : {op} ( {proc} )\nValues : {args} ( {vals} )", True)
+                show_error(e.__class__.__name__, f"Error : {str(e)}\nProc : {op} ( {proc} )\nValues : {args} ( {vals} )", True)
                 
