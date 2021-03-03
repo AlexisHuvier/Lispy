@@ -13,14 +13,25 @@ def type_good(provided, expected):
             if "|" in expected[i]:
                 found = False
                 for j in expected[i].split("|"):
-                    if provided[i].__class__.__name__ == j:
-                        found = True
-                        break
+                    try:
+                        if isinstance(provided[i], globals()[j]):
+                            found = True
+                            break
+                    except KeyError:
+                        if provided[i].__class__.__name__ == j:
+                            found = True
+                            break
                 if not found:
                     return False
             else:
-                if provided[i].__class__.__name__ != expected[i]:
-                    return False
+                try:
+                    print(globals()[expected[i]], isinstance(provided[i], globals()[expected[i]]))
+                    if not isinstance(provided[i], globals()[expected[i]]):
+                        return False
+                        break
+                except KeyError:
+                    if provided[i].__class__.__name__ != expected[i]:
+                        return False
     return True
 
 def lispy_function(name_lispy="", arguments=[], explaination="", must_async=False):
