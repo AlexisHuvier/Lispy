@@ -6,6 +6,12 @@
 
     (def bot (lpycord:bot:create "b!"))
 
+    (lpycord:bot:setready bot (
+        func (bot) (
+            (display (+ (lpycord:user:name (lpycord:bot:user bot)) " est connecté."))
+        )
+    ))
+
     (def help (lpycord:command:create "help" (
         func (bot message) (
             (def helpembed (lpycord:embed:create))

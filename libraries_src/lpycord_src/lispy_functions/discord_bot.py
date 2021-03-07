@@ -69,3 +69,35 @@ def lpycord_bot_setprefix(args):
 @lispy_function("lpycord:bot:run", ["Bot", "str"], "Launching bot with token")
 def lpycord_bot_run(args):
     args[0].run(args[1])
+
+@lispy_function("lpycord:bot:setready", ["Bot", "Procedure|NoneType"], "Setting Function called when bot is ready (or None)")
+def lpycord_bot_setready(args):
+    args[0].callbacks["ready"] = args[1]
+
+@lispy_function("lpycord:bot:setmessage", ["Bot", "Procedure|NoneType"], "Setting Function called when bot recieve a message (or None)")
+def lpycord_bot_setmessage(args):
+    args[0].callbacks["message"] = args[1]
+
+@lispy_function("lpycord:bot:setmessagedelete", ["Bot", "Procedure|NoneType"], "Setting Function called when a message is deleted (or None)")
+def lpycord_bot_setmessagedelete(args):
+    args[0].callbacks["message_delete"] = args[1]
+
+@lispy_function("lpycord:bot:setmessageedit", ["Bot", "Procedure|NoneType"], "Setting Function called when a message is edited (or None)")
+def lpycord_bot_setmessageedit(args):
+    args[0].callbacks["message_edit"] = args[1]
+
+@lispy_function("lpycord:bot:setreactionadd", ["Bot", "Procedure|NoneType"], "Setting Function called when a reaction is added (or None)")
+def lpycord_bot_setreactionadd(args):
+    args[0].callbacks["reaction_add"] = args[1]
+
+@lispy_function("lpycord:bot:setreactionremove", ["Bot", "Procedure|NoneType"], "Setting Function called when a reaction is removed (or None)")
+def lpycord_bot_setreactionremove(args):
+    args[0].callbacks["reaction_remove"] = args[1]
+
+@lispy_function("lpycord:bot:setmemberjoin", ["Bot", "Procedure|NoneType"], "Setting Function called when a member join a guild (or None)")
+def lpycord_bot_setmemberjoin(args):
+    args[0].callbacks["member_join"] = args[1]
+
+@lispy_function("lpycord:bot:setmemberremove", ["Bot", "Procedure|NoneType"], "Setting Function called when a member leave a guild (or None)")
+def lpycord_bot_setmemberremove(args):
+    args[0].callbacks["member_remove"] = args[1]

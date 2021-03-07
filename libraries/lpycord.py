@@ -5,7 +5,10 @@ module = {
     "lpycord:bot:prefix": lpycord_bot_prefix, "lpycord:bot:setprefix": lpycord_bot_setprefix, "lpycord:bot:commands": lpycord_bot_commands, "lpycord:bot:latency": lpycord_bot_latency, 
     "lpycord:bot:user": lpycord_bot_user, "lpycord:bot:guilds": lpycord_bot_guilds, "lpycord:bot:isready": lpycord_bot_isready, "lpycord:bot:close": lpycord_bot_close, 
     "lpycord:bot:getchannel": lpycord_bot_getchannel, "lpycord:bot:getguild": lpycord_bot_getguild, "lpycord:bot:getuser": lpycord_bot_getuser, "lpycord:bot:getemoji": lpycord_bot_getemoji, 
-    "lpycord:bot:users": lpycord_bot_users,
+    "lpycord:bot:users": lpycord_bot_users, "lpycord:bot:setready": lpycord_bot_setready, "lpycord:bot:setmessage": lpycord_bot_setmessage, "lpycord:bot:setready": lpycord_bot_setready, 
+    "lpycord:bot:setmessage": lpycord_bot_setmessage, "lpycord:bot:setmessagedelete": lpycord_bot_setmessagedelete, "lpycord:bot:setmessageedit": lpycord_bot_setmessageedit, 
+    "lpycord:bot:setreactionadd": lpycord_bot_setreactionadd, "lpycord:bot:setreactionremove": lpycord_bot_setreactionremove, "lpycord:bot:setmemberjoin": lpycord_bot_setmemberjoin, 
+    "lpycord:bot:setmemberremove": lpycord_bot_setmemberremove,
 
     "lpycord:user:name": lpycord_user_name, "lpycord:user:id": lpycord_user_id, "lpycord:user:discriminator": lpycord_user_discriminator, "lpycord:user:avatar": lpycord_user_avatar, 
     "lpycord:user:bot": lpycord_user_bot, "lpycord:user:system": lpycord_user_system, "lpycord:user:creating": lpycord_user_creating, "lpycord:user:mention": lpycord_user_mention, 
@@ -13,7 +16,7 @@ module = {
     "lpycord:user:sendfile": lpycord_user_sendfile,
 
     "lpycord:command:create": lpycord_command_create, "lpycord:command:name": lpycord_command_name, "lpycord:command:setname": lpycord_command_setname,
-    "lpycord:command:callback": lpycord_command_callback, "lpycord:command:setcallback": lpycord_command_setcallback,
+    "lpycord:command:setcallback": lpycord_command_setcallback,
 
     "lpycord:message:author": lpycord_message_author, "lpycord:message:id": lpycord_message_id, "lpycord:message:content": lpycord_message_content, 
     "lpycord:message:cleancontent": lpycord_message_cleancontent, "lpycord:message:guild": lpycord_message_guild, "lpycord:message:channel": lpycord_message_channel, 
