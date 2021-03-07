@@ -34,7 +34,7 @@ module = {
     "lpg:comp:control:settype": lpg_comp_control_settype,
 
     "lpg:comp:collision:create": lpg_comp_collision, "lpg:comp:collision:solid": lpg_comp_collision_solid, "lpg:comp:collision:setsolid": lpg_comp_collision_setsolid,
-    "lpg:comp:collision:callback": lpg_comp_collision_callback, "lpg:comp:collision:setcallback": lpg_comp_collision_setcallback,
+    "lpg:comp:collision:callback": lpg_comp_collision_callback, "lpg:comp:collision:setcallback": lpg_comp_collision_setcallback, "lpg:comp:collision:cango": lpg_comp_collision_cango,
 
     "lpg:comp:physics:create": lpg_comp_physics, "lpg:comp:physics:gravity": lpg_comp_physics_gravity, "lpg:comp:physics:maxgravity": lpg_comp_physics_maxgravity,
     "lpg:comp:physics:setgravity": lpg_comp_physics_setgravity, "lpg:comp:physics:setmaxgravity": lpg_comp_physics_setmaxgravity,    
