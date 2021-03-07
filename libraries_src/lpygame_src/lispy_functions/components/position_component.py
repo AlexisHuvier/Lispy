@@ -28,4 +28,4 @@ def lpg_comp_position_pos(args):
 
 @lispy_function("lpg:comp:position:setpos", ["PositionComponent", "Vec2"], "Setting position from PositionComponent")
 def lpg_comp_position_setpos(args):
-    args[0].set_pos(args[0])
+    args[0].set_pos(args[1])
