@@ -46,3 +46,7 @@ def lpg_win_world(args):
 @lispy_function("lpg:win:setworld", ["Window", "World"], "Setting World to Window")
 def lpg_win_setworld(args):
     args[0].world = args[1]
+
+@lispy_function("lpg:win:update", ["Window", "Procedure|NoneType"], "Setting a function called when window is updated (or None)")
+def lpg_win_update(args):
+    args[0].update_callack = args[1]

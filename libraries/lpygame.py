@@ -4,6 +4,7 @@ from libraries_src.lpygame_src.lispy_functions.components import *
 module = {
     "lpg:win:create": lpg_win, "lpg:win:run": lpg_win_run, "lpg:win:setdebug": lpg_win_setdebug, "lpg:win:debug": lpg_win_debug, "lpg:win:setcolor": lpg_win_setcolor, 
     "lpg:win:color": lpg_win_color, "lpg:win:fps": lpg_win_fps, "lpg:win:setfps": lpg_win_setfps, "lpg:win:world": lpg_win_world, "lpg:win:setworld": lpg_win_setworld,
+    "lpg:win:update": lpg_win_update,
 
 
     "lpg:world:create": lpg_world, "lpg:world:getsystem": lpg_world_getsystem,

@@ -24,6 +24,7 @@ class Window:
         self.is_running = False
         self.debug_font = Font("arial", 15, True, False, False, Color.from_name("ORANGE"), None, False)
         self.world = World(self)
+        self.update_callack = None
     
     def stop(self):
         self.is_running = False
@@ -35,6 +36,8 @@ class Window:
                 self.process_event(event)
 
             self.world.update()
+            if self.update_callack != None:
+                self.update_callack()
             self.screen.fill(self.color.get_rgba())
 
             self.world.show()
