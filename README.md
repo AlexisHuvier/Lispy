@@ -50,7 +50,7 @@ Documentation : <https://alexishuvier.github.io/Lispy-Docs/>
 
   - lpygame : Make you own game based on python's pygame (WIP) (87 functions) (must install pygame)
   - lrequests : Based on python's requests (WIP) (8 functions) (must install requests)
-  - lpycord : Make you own discord bot (WIP) (61 functions) (must install discord.py)
+  - lpycord : Make you own discord bot (WIP) (73 functions) (must install discord.py)
 
 ## Changelog
 

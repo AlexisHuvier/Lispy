@@ -7,6 +7,11 @@ module = {
     "lpycord:bot:getchannel": lpycord_bot_getchannel, "lpycord:bot:getguild": lpycord_bot_getguild, "lpycord:bot:getuser": lpycord_bot_getuser, "lpycord:bot:getemoji": lpycord_bot_getemoji, 
     "lpycord:bot:users": lpycord_bot_users,
 
+    "lpycord:user:name": lpycord_user_name, "lpycord:user:id": lpycord_user_id, "lpycord:user:discriminator": lpycord_user_discriminator, "lpycord:user:avatar": lpycord_user_avatar, 
+    "lpycord:user:bot": lpycord_user_bot, "lpycord:user:system": lpycord_user_system, "lpycord:user:creating": lpycord_user_creating, "lpycord:user:mention": lpycord_user_mention, 
+    "lpycord:user:mentionin": lpycord_user_mentionin, "lpycord:user:send": lpycord_user_send, "lpycord:user:sendembed": lpycord_user_sendembed, 
+    "lpycord:user:sendfile": lpycord_user_sendfile,
+
     "lpycord:command:create": lpycord_command_create, "lpycord:command:name": lpycord_command_name, "lpycord:command:setname": lpycord_command_setname,
     "lpycord:command:callback": lpycord_command_callback, "lpycord:command:setcallback": lpycord_command_setcallback,
 

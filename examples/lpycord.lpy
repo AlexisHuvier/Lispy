@@ -6,25 +6,37 @@
 
     (def bot (lpycord:bot:create "b!"))
 
-    (def helpembed (lpycord:embed:create))
-    (lpycord:embed:settitle helpembed "List of Commands")
-    (lpycord:embed:setdescription helpembed "List of Bot commands")
-    (lpycord:embed:addfield helpembed "b!help" "Show this menu.")
-    (lpycord:embed:addfield helpembed "b!ping" "Reply PONG.")
-
-    (def helpcommand (lpycord:command:create "help" (
+    (def help (lpycord:command:create "help" (
         func (bot message) (
+            (def helpembed (lpycord:embed:create))
+            (lpycord:embed:settitle helpembed "List of Commands")
+            (lpycord:embed:setdescription helpembed "List of Bot commands")
+            (lpycord:embed:addfield helpembed "b!help" "Show this menu.")
+            (lpycord:embed:addfield helpembed "b!ping" "Reply PONG.")
+            (lpycord:embed:addfield helpembed "b!botinfo" "Information on Bot.")
             (lpycord:textchan:sendembed (lpycord:message:channel message) helpembed)
         )
     )))
-    (def pingcommand (lpycord:command:create "ping" (
+    (def ping (lpycord:command:create "ping" (
         func (bot message) (
             (lpycord:message:reply message "PONG")
         )
     )))
+    (def botinfo (lpycord:command:create "botinfo" (
+        func (bot message) (
+            (def botinfoembed (lpycord:embed:create))
+            (lpycord:embed:settitle botinfoembed "Information on Bourse")
+            (lpycord:embed:addfield botinfoembed "Nom" (lpycord:user:name (lpycord:bot:user bot)))
+            (lpycord:embed:addfield botinfoembed "Discriminateur" (lpycord:user:discriminator (lpycord:bot:user bot)))
+            (lpycord:embed:addfield botinfoembed "Mention" (lpycord:user:mention (lpycord:bot:user bot)))
+            (lpycord:embed:addfield botinfoembed "Date Creation" (str (lpycord:user:creating (lpycord:bot:user bot))))
+            (lpycord:textchan:sendembed (lpycord:message:channel message) botinfoembed)
+        )
+    )))
 
-    (lpycord:bot:addcommand bot helpcommand)
-    (lpycord:bot:addcommand bot pingcommand)
+    (lpycord:bot:addcommand bot help)
+    (lpycord:bot:addcommand bot ping)
+    (lpycord:bot:addcommand bot botinfo)
 
     (lpycord:bot:run bot token)
 )
