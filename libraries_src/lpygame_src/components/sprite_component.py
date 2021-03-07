@@ -8,7 +8,7 @@ class SpriteComponent(Component):
     def __init__(self, sprite, rotation=0, size=None, flipx=False, flipy=False):
         super(SpriteComponent, self).__init__()
         self.sprite = sprite
-        self.image = pygame.image.load(sprite).convert()
+        self.image = pygame.image.load(sprite).convert_alpha()
         if size is None:
             size = Vec2(self.image.get_rect().width, self.image.get_rect().height)
         self.size = size
