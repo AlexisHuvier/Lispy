@@ -10,14 +10,16 @@ class ShowComponent(Component):
         else:
             self.required_components.add("TextComponent")
         self.sprite = sprite
+        self.displayed = True
     
     def show(self, screen):
-        pos = self.entity.get_component("PositionComponent").pos()
-        if self.sprite:
-            image = self.entity.get_component("SpriteComponent").transformed_image
-        else:
-            image = self.entity.get_component("TextComponent").render
-        screen.blit(image, pos.coords())
+        if self.displayed:
+            pos = self.entity.get_component("PositionComponent").pos()
+            if self.sprite:
+                image = self.entity.get_component("SpriteComponent").transformed_image
+            else:
+                image = self.entity.get_component("TextComponent").render
+            screen.blit(image, pos.coords())
     
     def show_debug(self, screen):
         pass

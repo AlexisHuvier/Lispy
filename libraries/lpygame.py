@@ -17,7 +17,7 @@ module = {
     "lpg:entity:id": lpg_entity_id,
 
 
-    "lpg:comp:show:create": lpg_comp_show, 
+    "lpg:comp:show:create": lpg_comp_show, "lpg:comp:show:displayed": lpg_comp_show_displayed, "lpg:comp:show:setdisplayed": lpg_comp_show_setdisplayed,
 
     "lpg:comp:text:create": lpg_comp_text, "lpg:comp:text:text": lpg_comp_text_text, "lpg:comp:text:settext": lpg_comp_text_settext, "lpg:comp:text:font": lpg_comp_text_font, 
     "lpg:comp:text:setfont": lpg_comp_text_setfont, "lpg:comp:text:update": lpg_comp_text_update,
