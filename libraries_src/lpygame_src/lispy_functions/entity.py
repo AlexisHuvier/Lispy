@@ -21,3 +21,7 @@ def lpg_entity_has(args):
 @lispy_function("lpg:entity:get", ["Entity", "str"], "Getting Component from Entity by its name")
 def lpg_entity_get(args):
     return args[0].get_component(args[1])
+
+@lispy_function("lpg:entity:id", ["Entity"], "Getting entity's id")
+def lpg_entity_id(args):
+    return args[0].identity

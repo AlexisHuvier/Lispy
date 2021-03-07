@@ -14,6 +14,7 @@ module = {
 
 
     "lpg:entity:create": lpg_entity, "lpg:entity:add": lpg_entity_add, "lpg:entity:remove": lpg_entity_remove, "lpg:entity:has": lpg_entity_has, "lpg:entity:get": lpg_entity_get,
+    "lpg:entity:id": lpg_entity_id,
 
 
     "lpg:comp:show:create": lpg_comp_show, 
