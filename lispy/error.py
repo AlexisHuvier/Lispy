@@ -25,7 +25,6 @@ def type_good(provided, expected):
                     return False
             else:
                 try:
-                    print(globals()[expected[i]], isinstance(provided[i], globals()[expected[i]]))
                     if not isinstance(provided[i], globals()[expected[i]]):
                         return False
                         break
