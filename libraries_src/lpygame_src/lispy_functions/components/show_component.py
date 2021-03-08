@@ -2,7 +2,7 @@ from libraries_src.lpygame_src.components import *
 from lispy.error import lispy_function
 
 
-@lispy_function("lpg:comp:show:create", ["bool"], "Creating ShowComponent")
+@lispy_function("lpg:comp:show:create", ["bool"], "Creating ShowComponent with bool to know if use sprite or text")
 def lpg_comp_show(args):
     return ShowComponent(args[0])
 
