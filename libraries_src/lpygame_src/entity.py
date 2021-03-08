@@ -60,7 +60,8 @@ class Entity(pygame.sprite.Sprite):
             self.get_component("ControlComponent").keyup(evt)
 
     def mousepress(self, evt):
-        pass
+        if self.has_component("ClickComponent"):
+            self.get_component("ClickComponent").mousepress(evt)
 
     def mousemotion(self, evt):
         pass

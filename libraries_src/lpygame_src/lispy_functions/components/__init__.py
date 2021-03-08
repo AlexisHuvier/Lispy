@@ -5,3 +5,4 @@ from libraries_src.lpygame_src.lispy_functions.components.sprite_component impor
 from libraries_src.lpygame_src.lispy_functions.components.control_component import *
 from libraries_src.lpygame_src.lispy_functions.components.collision_component import *
 from libraries_src.lpygame_src.lispy_functions.components.physics_component import *
+from libraries_src.lpygame_src.lispy_functions.components.click_component import *

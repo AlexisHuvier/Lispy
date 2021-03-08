@@ -5,3 +5,4 @@ from libraries_src.lpygame_src.components.sprite_component import SpriteComponen
 from libraries_src.lpygame_src.components.control_component import ControlComponent
 from libraries_src.lpygame_src.components.collision_component import CollisionComponent
 from libraries_src.lpygame_src.components.physics_component import PhysicsComponent
+from libraries_src.lpygame_src.components.click_component import ClickComponent
