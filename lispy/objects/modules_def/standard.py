@@ -2,37 +2,73 @@ import operator as op
 from lispy.error import lispy_function, show_error
 import sys
 
-@lispy_function("input", [""], "Getting user input")
+@lispy_function("input", ["..."], "Getting user input with a prompt")
 def input_advanced(args):
-    return input(str(args[0]))
+    return input(" ".join(map(str, args)))
 
-@lispy_function("print", [""], "Print value")
+@lispy_function("print", ["..."], "Print values")
 def print_advanced(args):
-    return print(str(args[0]))
+    return print(" ".join(map(str, args)))
 
-@lispy_function("+", ["", ""], "Adding two values")
+@lispy_function("+", ["..."], "Adding values")
 def add(args):
-    return op.add(args[0], args[1])
+    r = None
+    for i in args:
+        if r is None:
+            r = i
+        else:
+            r += i
+    return r
 
-@lispy_function("-", ["", ""], "Substracting two values")
+@lispy_function("-", ["..."], "Substracting values")
 def sub(args):
-    return op.sub(args[0], args[1])
+    r = None
+    for i in args:
+        if r is None:
+            r = i
+        else:
+            r -= i
+    return r
 
-@lispy_function("*", ["", ""], "Multipling two values")
+@lispy_function("*", ["..."], "Multipling values")
 def mul(args):
-    return op.mul(args[0], args[1])
+    r = None
+    for i in args:
+        if r is None:
+            r = i
+        else:
+            r *= i
+    return r
 
-@lispy_function("/", ["", ""], "Divising two values")
+@lispy_function("/", ["..."], "Dividing values")
 def div(args):
-    return op.truediv(args[0], args[1])
+    r = None
+    for i in args:
+        if r is None:
+            r = i
+        else:
+            r /= i
+    return r
 
-@lispy_function("//", ["", ""], "Getting euclidienne division of two values")
+@lispy_function("//", ["..."], "Getting euclidienne division of values")
 def floordiv(args):
-    return op.floordiv(args[0], args[1])
+    r = None
+    for i in args:
+        if r is None:
+            r = i
+        else:
+            r = r // i
+    return r
 
-@lispy_function("%", ["", ""], "Getting modulo of two values")
+@lispy_function("%", ["..."], "Getting modulo of values")
 def mod(args):
-    return op.mod(args[0], args[1])
+    r = None
+    for i in args:
+        if r is None:
+            r = i
+        else:
+            r %= i
+    return r
 
 @lispy_function(">", ["", ""], "Return if value is greater than other value")
 def gt(args):
