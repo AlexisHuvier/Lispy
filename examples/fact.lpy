@@ -2,8 +2,11 @@
     (def ! (
         func (nb) (
             (def result 1)
-            (for test (list:create 1 (+ nb 1)) (set result (* result test)))
+            (for test (list 1 (+ nb 1)) (def result (* result test)))
             (ret result)
         )
     ))
+
+    (# Calculer 5!)
+    (display (! 5))
 )
