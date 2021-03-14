@@ -6,3 +6,4 @@ from libraries_src.lpygame_src.lispy_functions.components.control_component impo
 from libraries_src.lpygame_src.lispy_functions.components.collision_component import *
 from libraries_src.lpygame_src.lispy_functions.components.physics_component import *
 from libraries_src.lpygame_src.lispy_functions.components.click_component import *
+from libraries_src.lpygame_src.lispy_functions.components.move_component import *

@@ -41,6 +41,9 @@ module = {
 
     "lpg:comp:click:create": lpg_comp_click, "lpg:comp:click:callback": lpg_comp_click_callback,
 
+    "lpg:comp:move:create": lpg_comp_move, "lpg:comp:move:speed": lpg_comp_move_speed, "lpg:comp:move:setspeed": lpg_comp_move_setspeed, "lpg:comp:move:pos": lpg_comp_move_pos, 
+    "lpg:comp:move:setpos": lpg_comp_move_setpos,
+
 
     "lpg:font:create": lpg_font, "lpg:font:rendersize": lpg_font_rendersize, "lpg:font:name": lpg_font_name, "lpg:font:setname": lpg_font_setname, "lpg:font:size": lpg_font_size, 
     "lpg:font:setsize": lpg_font_setsize, "lpg:font:bold": lpg_font_bold, "lpg:font:setbold": lpg_font_setbold, "lpg:font:italic": lpg_font_italic, "lpg:font:setitalic": lpg_font_setitalic, 

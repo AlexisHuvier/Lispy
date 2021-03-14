@@ -6,3 +6,4 @@ from libraries_src.lpygame_src.components.control_component import ControlCompon
 from libraries_src.lpygame_src.components.collision_component import CollisionComponent
 from libraries_src.lpygame_src.components.physics_component import PhysicsComponent
 from libraries_src.lpygame_src.components.click_component import ClickComponent
+from libraries_src.lpygame_src.components.move_component import MoveComponent
