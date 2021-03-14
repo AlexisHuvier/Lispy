@@ -61,6 +61,8 @@ class Lispy:
                 env[var] = i
                 cls.lispy_eval(conseq, env)
             return None
+        elif op == "#":
+            pass
         elif op == 'def':
             symbol, exp = args
             env[symbol] = cls.lispy_eval(exp, env)
